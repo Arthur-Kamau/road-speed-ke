@@ -31,12 +31,13 @@
 		}, 400);
 	}
 
+	let canPreview = $derived(startCoord !== null && endCoord !== null);
+
 	function selectStart(r: NominatimResult) {
 		startQuery = r.display_name.split(',').slice(0, 2).join(',');
 		startCoord = [parseFloat(r.lat), parseFloat(r.lon)];
 		startResults = [];
 		startFocused = false;
-		tryRoute();
 	}
 
 	function selectEnd(r: NominatimResult) {
@@ -44,10 +45,23 @@
 		endCoord = [parseFloat(r.lat), parseFloat(r.lon)];
 		endResults = [];
 		endFocused = false;
-		tryRoute();
 	}
 
-	function tryRoute() {
+	async function resolveAndGo() {
+		if (!startCoord && startQuery.length >= 2) {
+			const results = await geocode(startQuery);
+			if (results.length > 0) {
+				startCoord = [parseFloat(results[0].lat), parseFloat(results[0].lon)];
+				startQuery = results[0].display_name.split(',').slice(0, 2).join(',');
+			}
+		}
+		if (!endCoord && endQuery.length >= 2) {
+			const results = await geocode(endQuery);
+			if (results.length > 0) {
+				endCoord = [parseFloat(results[0].lat), parseFloat(results[0].lon)];
+				endQuery = results[0].display_name.split(',').slice(0, 2).join(',');
+			}
+		}
 		if (startCoord && endCoord) {
 			onRoute(startCoord, endCoord);
 		}
@@ -56,7 +70,10 @@
 	function handleSwap() {
 		[startQuery, endQuery] = [endQuery, startQuery];
 		[startCoord, endCoord] = [endCoord, startCoord];
-		tryRoute();
+	}
+
+	function handleKeydown(e: KeyboardEvent) {
+		if (e.key === 'Enter') resolveAndGo();
 	}
 </script>
 
@@ -74,10 +91,13 @@
 				bind:value={startQuery}
 				onfocus={() => (startFocused = true)}
 				onblur={() => setTimeout(() => (startFocused = false), 200)}
-				oninput={() =>
+				onkeydown={handleKeydown}
+				oninput={() => {
+					startCoord = null;
 					debounceSearch(startQuery, (r) => {
 						startResults = r;
-					})}
+					});
+				}}
 			/>
 		</div>
 		{#if startFocused && startResults.length > 0}
@@ -108,10 +128,13 @@
 				bind:value={endQuery}
 				onfocus={() => (endFocused = true)}
 				onblur={() => setTimeout(() => (endFocused = false), 200)}
-				oninput={() =>
+				onkeydown={handleKeydown}
+				oninput={() => {
+					endCoord = null;
 					debounceSearch(endQuery, (r) => {
 						endResults = r;
-					})}
+					});
+				}}
 			/>
 		</div>
 		{#if endFocused && endResults.length > 0}
@@ -127,9 +150,17 @@
 		{/if}
 	</div>
 
-	{#if loading}
-		<div class="loading">Calculating route...</div>
-	{/if}
+	<button
+		class="preview-btn"
+		disabled={loading || (startQuery.length < 2 || endQuery.length < 2)}
+		onclick={resolveAndGo}
+	>
+		{#if loading}
+			Calculating route...
+		{:else}
+			Preview Route
+		{/if}
+	</button>
 </div>
 
 <style>
@@ -247,10 +278,26 @@
 		color: #333;
 	}
 
-	.loading {
-		text-align: center;
-		font-size: 12px;
-		color: #888;
-		padding: 8px 0 0;
+	.preview-btn {
+		width: 100%;
+		margin-top: 12px;
+		padding: 12px;
+		background: #2563eb;
+		color: white;
+		border: none;
+		border-radius: 8px;
+		font-size: 14px;
+		font-weight: 600;
+		cursor: pointer;
+		transition: background 0.15s;
+	}
+
+	.preview-btn:hover:not(:disabled) {
+		background: #1d4ed8;
+	}
+
+	.preview-btn:disabled {
+		background: #93c5fd;
+		cursor: not-allowed;
 	}
 </style>

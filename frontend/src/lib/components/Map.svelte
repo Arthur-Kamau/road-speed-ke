@@ -13,41 +13,45 @@
 	let { segments = [], startMarker = null, endMarker = null, onMapClick }: Props = $props();
 
 	let mapContainer: HTMLDivElement;
-	let map: L.Map;
-	let layerGroup: L.LayerGroup;
+	let map: L.Map | null = $state(null);
+	let layerGroup: L.LayerGroup | null = $state(null);
 	let startMarkerLayer: L.Marker | null = null;
 	let endMarkerLayer: L.Marker | null = null;
-	let L: typeof import('leaflet');
+	let leaflet: typeof import('leaflet') | null = $state(null);
 
 	onMount(async () => {
-		L = await import('leaflet');
+		const L = await import('leaflet');
+		leaflet = L;
 
-		map = L.map(mapContainer, {
+		const m = L.map(mapContainer, {
 			center: [-1.2864, 36.8172],
 			zoom: 7,
 			zoomControl: false
 		});
 
-		L.control.zoom({ position: 'bottomright' }).addTo(map);
+		L.control.zoom({ position: 'bottomright' }).addTo(m);
 
 		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			attribution:
 				'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 			maxZoom: 19
-		}).addTo(map);
+		}).addTo(m);
 
-		layerGroup = L.layerGroup().addTo(map);
+		const lg = L.layerGroup().addTo(m);
 
-		map.on('click', (e: L.LeafletMouseEvent) => {
+		m.on('click', (e: L.LeafletMouseEvent) => {
 			onMapClick?.(e.latlng.lat, e.latlng.lng);
 		});
+
+		map = m;
+		layerGroup = lg;
 	});
 
 	onDestroy(() => {
 		map?.remove();
 	});
 
-	function createIcon(color: string, label: string): L.DivIcon {
+	function createIcon(L: typeof import('leaflet'), color: string, label: string): L.DivIcon {
 		return L.divIcon({
 			className: 'custom-marker',
 			html: `<div style="background:${color};width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;color:white;font-size:12px;font-weight:700;">${label}</div>`,
@@ -57,27 +61,26 @@
 	}
 
 	$effect(() => {
-		if (!map || !L || !layerGroup) return;
+		const L = leaflet;
+		const m = map;
+		const lg = layerGroup;
+		const segs = segments;
+		const sm = startMarker;
+		const em = endMarker;
 
-		layerGroup.clearLayers();
+		if (!L || !m || !lg) return;
 
-		for (const seg of segments) {
+		lg.clearLayers();
+
+		for (const seg of segs) {
 			const color = getSpeedColor(seg.speedLimit);
 			const latlngs = seg.coordinates.map((c) => L.latLng(c[0], c[1]));
 
-			const bgLine = L.polyline(latlngs, {
-				color: '#000',
-				weight: 8,
-				opacity: 0.2
-			});
-			layerGroup.addLayer(bgLine);
+			lg.addLayer(
+				L.polyline(latlngs, { color: '#000', weight: 8, opacity: 0.2 })
+			);
 
-			const line = L.polyline(latlngs, {
-				color,
-				weight: 5,
-				opacity: 0.9
-			});
-
+			const line = L.polyline(latlngs, { color, weight: 5, opacity: 0.9 });
 			line.bindPopup(
 				`<div style="font-family:sans-serif;font-size:13px;">
 					<strong>${seg.roadName}</strong><br>
@@ -86,35 +89,29 @@
 					</span>
 				</div>`
 			);
-
-			layerGroup.addLayer(line);
+			lg.addLayer(line);
 		}
 
 		if (startMarkerLayer) {
-			map.removeLayer(startMarkerLayer);
+			m.removeLayer(startMarkerLayer);
 			startMarkerLayer = null;
 		}
 		if (endMarkerLayer) {
-			map.removeLayer(endMarkerLayer);
+			m.removeLayer(endMarkerLayer);
 			endMarkerLayer = null;
 		}
 
-		if (startMarker) {
-			startMarkerLayer = L.marker(startMarker, {
-				icon: createIcon('#22c55e', 'A')
-			}).addTo(map);
+		if (sm) {
+			startMarkerLayer = L.marker(sm, { icon: createIcon(L, '#22c55e', 'A') }).addTo(m);
+		}
+		if (em) {
+			endMarkerLayer = L.marker(em, { icon: createIcon(L, '#ef4444', 'B') }).addTo(m);
 		}
 
-		if (endMarker) {
-			endMarkerLayer = L.marker(endMarker, {
-				icon: createIcon('#ef4444', 'B')
-			}).addTo(map);
-		}
-
-		if (segments.length > 0) {
-			const allCoords = segments.flatMap((s) => s.coordinates);
+		if (segs.length > 0) {
+			const allCoords = segs.flatMap((s) => s.coordinates);
 			const bounds = L.latLngBounds(allCoords.map((c) => L.latLng(c[0], c[1])));
-			map.fitBounds(bounds, { padding: [50, 50] });
+			m.fitBounds(bounds, { padding: [50, 50] });
 		}
 	});
 </script>

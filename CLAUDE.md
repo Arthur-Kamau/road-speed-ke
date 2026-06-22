@@ -36,9 +36,9 @@ make dev                                # All-in-one: db + migrate + seed + serv
 ### Frontend (SvelteKit)
 ```bash
 cd frontend
-npm install                             # Install deps
-npm run dev                             # Dev server on :5173 (proxies /api to :8080)
-npm run build                           # Production build
+pnpm install                             # Install deps
+pnpm run dev                             # Dev server on :5173 (proxies /api to :8080)
+pnpm run build                           # Production build
 npx svelte-check --tsconfig ./tsconfig.json  # Type check
 ```
 
