@@ -1,0 +1,169 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Mombasa Road (A109)",
+        "speed_limit_kmh": 80,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "Traffic Act Cap 403 / NTSA Gazette Notice",
+        "verified": true,
+        "county": "Nairobi",
+        "last_updated": "2025-01-15"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.8219, -1.3191],
+          [36.8301, -1.3145],
+          [36.8389, -1.3102],
+          [36.8461, -1.3058],
+          [36.8527, -1.3011],
+          [36.8612, -1.2960]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Thika Superhighway (A2)",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "Kenya Gazette Notice / NTSA",
+        "verified": true,
+        "county": "Nairobi",
+        "last_updated": "2025-01-15"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.8444, -1.2728],
+          [36.8520, -1.2584],
+          [36.8580, -1.2442],
+          [36.8620, -1.2310],
+          [36.8660, -1.2185],
+          [36.8720, -1.2042]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Uhuru Highway",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403 — Built-up area default",
+        "verified": true,
+        "county": "Nairobi",
+        "last_updated": "2025-01-15"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.8168, -1.2892],
+          [36.8178, -1.2905],
+          [36.8190, -1.2935],
+          [36.8198, -1.2962],
+          [36.8203, -1.2988],
+          [36.8211, -1.3015]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Waiyaki Way (A104)",
+        "speed_limit_kmh": 80,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "Traffic Act Cap 403 / NTSA Gazette Notice",
+        "verified": true,
+        "county": "Nairobi",
+        "last_updated": "2025-01-15"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.7943, -1.2620],
+          [36.7840, -1.2598],
+          [36.7735, -1.2578],
+          [36.7632, -1.2562],
+          [36.7530, -1.2550]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Langata Road",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403 — Built-up area default",
+        "verified": false,
+        "county": "Nairobi",
+        "last_updated": "2025-01-15"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.8115, -1.3078],
+          [36.8030, -1.3120],
+          [36.7940, -1.3168],
+          [36.7852, -1.3210],
+          [36.7760, -1.3255]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Nairobi Expressway",
+        "speed_limit_kmh": 110,
+        "road_class": "expressway",
+        "direction": "both",
+        "source": "NTSA / Kenya National Highways Authority",
+        "verified": true,
+        "county": "Nairobi",
+        "last_updated": "2025-01-15"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.8295, -1.3170],
+          [36.8251, -1.3070],
+          [36.8220, -1.2970],
+          [36.8195, -1.2880],
+          [36.8180, -1.2790]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Jogoo Road",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403 — Built-up area default",
+        "verified": false,
+        "county": "Nairobi",
+        "last_updated": "2025-01-15"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.8460, -1.2920],
+          [36.8550, -1.2935],
+          [36.8640, -1.2948],
+          [36.8730, -1.2960],
+          [36.8820, -1.2972]
+        ]
+      }
+    }
+  ]
+}
