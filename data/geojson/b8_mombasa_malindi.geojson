@@ -1,0 +1,125 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B8 — Mombasa City (Nyali Bridge to Kisauni)",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Municipality",
+        "verified": true,
+        "county": "Mombasa",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [39.6850, -4.0430],
+          [39.6880, -4.0350],
+          [39.6900, -4.0270],
+          [39.6920, -4.0190],
+          [39.6940, -4.0110]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B8 — Mombasa to Kilifi (Open Highway)",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "verified": true,
+        "county": "Kilifi",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [39.6940, -4.0110],
+          [39.7000, -3.9800],
+          [39.7100, -3.9400],
+          [39.7200, -3.9000],
+          [39.7300, -3.8600],
+          [39.7400, -3.8200],
+          [39.7500, -3.7800],
+          [39.7600, -3.7400],
+          [39.7700, -3.7000],
+          [39.7800, -3.6600]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B8 — Kilifi Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": true,
+        "county": "Kilifi",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [39.7800, -3.6600],
+          [39.7840, -3.6540],
+          [39.7880, -3.6480]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B8 — Kilifi to Malindi (Open Highway)",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "verified": true,
+        "county": "Kilifi",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [39.7880, -3.6480],
+          [39.8000, -3.6100],
+          [39.8200, -3.5600],
+          [39.8400, -3.5100],
+          [39.8600, -3.4600],
+          [39.8800, -3.4100],
+          [39.9000, -3.3600],
+          [39.9200, -3.3100]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B8 — Malindi Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": true,
+        "county": "Kilifi",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [39.9200, -3.3100],
+          [39.9260, -3.3050],
+          [39.9320, -3.3000],
+          [39.9380, -3.2950]
+        ]
+      }
+    }
+  ]
+}

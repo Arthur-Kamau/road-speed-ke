@@ -1,0 +1,192 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 — Thika Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Municipality",
+        "verified": true,
+        "county": "Kiambu",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.0690, -1.0420],
+          [37.0740, -1.0380],
+          [37.0790, -1.0340],
+          [37.0840, -1.0300]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 — Thika to Kenol/Makutano",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "verified": true,
+        "county": "Murang'a",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.0840, -1.0300],
+          [37.0900, -1.0100],
+          [37.0950, -0.9900],
+          [37.1000, -0.9700],
+          [37.1050, -0.9500],
+          [37.1100, -0.9300]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 — Kenol/Makutano Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": true,
+        "county": "Murang'a",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.1100, -0.9300],
+          [37.1140, -0.9260],
+          [37.1180, -0.9220]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 — Kenol to Sagana",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "verified": true,
+        "county": "Murang'a",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.1180, -0.9220],
+          [37.1200, -0.8800],
+          [37.1250, -0.8400],
+          [37.1300, -0.8000],
+          [37.1350, -0.7600],
+          [37.1400, -0.7200],
+          [37.1450, -0.6800]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 — Sagana to Karatina",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "verified": true,
+        "county": "Nyeri",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.1450, -0.6800],
+          [37.1400, -0.6400],
+          [37.1350, -0.6000],
+          [37.1300, -0.5600],
+          [37.1250, -0.5200],
+          [37.1200, -0.4800]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 — Karatina Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": true,
+        "county": "Nyeri",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.1200, -0.4800],
+          [37.1160, -0.4750],
+          [37.1120, -0.4700]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 — Karatina to Nanyuki",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "verified": true,
+        "county": "Laikipia",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.1120, -0.4700],
+          [37.1000, -0.4200],
+          [37.0900, -0.3700],
+          [37.0800, -0.3200],
+          [37.0700, -0.2700],
+          [37.0600, -0.2200],
+          [37.0500, -0.1700],
+          [37.0400, -0.1200],
+          [37.0300, -0.0700],
+          [37.0200, -0.0200]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 — Nanyuki Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Municipality",
+        "verified": true,
+        "county": "Laikipia",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.0200, -0.0200],
+          [37.0160, -0.0150],
+          [37.0120, -0.0100],
+          [37.0080, -0.0050]
+        ]
+      }
+    }
+  ]
+}

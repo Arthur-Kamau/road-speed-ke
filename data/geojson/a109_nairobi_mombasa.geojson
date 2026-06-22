@@ -1,0 +1,309 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A109 — Athi River Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": true,
+        "county": "Machakos",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.9590, -1.4510],
+          [36.9680, -1.4530],
+          [36.9770, -1.4545],
+          [36.9860, -1.4560]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A109 — Athi River to Machakos Junction",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "verified": true,
+        "county": "Machakos",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.9860, -1.4560],
+          [37.0100, -1.4650],
+          [37.0350, -1.4780],
+          [37.0600, -1.4920],
+          [37.0850, -1.5060]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A109 — Machakos Junction to Sultan Hamud",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "verified": true,
+        "county": "Makueni",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.0850, -1.5060],
+          [37.1200, -1.5400],
+          [37.1600, -1.5800],
+          [37.2000, -1.6200],
+          [37.2400, -1.6600],
+          [37.2800, -1.7000],
+          [37.3200, -1.7400]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A109 — Sultan Hamud Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": true,
+        "county": "Makueni",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.3200, -1.7400],
+          [37.3260, -1.7440],
+          [37.3320, -1.7480]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A109 — Sultan Hamud to Makindu",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "verified": true,
+        "county": "Makueni",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.3320, -1.7480],
+          [37.3800, -1.7850],
+          [37.4300, -1.8200],
+          [37.4800, -1.8550],
+          [37.5300, -1.8900],
+          [37.5800, -1.9250]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A109 — Makindu Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": true,
+        "county": "Makueni",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.5800, -1.9250],
+          [37.5860, -1.9280],
+          [37.5920, -1.9310]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A109 — Makindu to Mtito Andei",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "verified": true,
+        "county": "Makueni",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.5920, -1.9310],
+          [37.6500, -1.9700],
+          [37.7100, -2.0100],
+          [37.7700, -2.0500],
+          [37.8300, -2.0900],
+          [37.8900, -2.1300],
+          [37.9500, -2.1700]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A109 — Mtito Andei Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": true,
+        "county": "Makueni",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.9500, -2.1700],
+          [37.9560, -2.1730],
+          [37.9620, -2.1760]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A109 — Mtito Andei to Voi",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "verified": true,
+        "county": "Taita-Taveta",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.9620, -2.1760],
+          [38.0300, -2.2200],
+          [38.1000, -2.2700],
+          [38.1700, -2.3200],
+          [38.2400, -2.3700],
+          [38.3100, -2.4200],
+          [38.3800, -2.4700],
+          [38.4500, -2.5200],
+          [38.5200, -2.5700],
+          [38.5600, -3.3930]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A109 — Voi Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": true,
+        "county": "Taita-Taveta",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [38.5600, -3.3930],
+          [38.5650, -3.3960],
+          [38.5700, -3.3990],
+          [38.5750, -3.4020]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A109 — Voi to Mariakani",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "verified": true,
+        "county": "Kwale",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [38.5750, -3.4020],
+          [38.6500, -3.4500],
+          [38.7300, -3.5000],
+          [38.8100, -3.5500],
+          [38.8900, -3.6000],
+          [38.9700, -3.6500],
+          [39.0500, -3.7000],
+          [39.4550, -3.8700]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A109 — Mariakani Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": true,
+        "county": "Kilifi",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [39.4550, -3.8700],
+          [39.4600, -3.8730],
+          [39.4650, -3.8760]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A109 — Mariakani to Mombasa",
+        "speed_limit_kmh": 80,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 — Being upgraded to dual carriageway",
+        "verified": true,
+        "county": "Mombasa",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [39.4650, -3.8760],
+          [39.4900, -3.8950],
+          [39.5150, -3.9150],
+          [39.5400, -3.9350],
+          [39.5650, -3.9550],
+          [39.5900, -3.9750],
+          [39.6150, -3.9950]
+        ]
+      }
+    }
+  ]
+}

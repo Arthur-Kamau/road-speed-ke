@@ -1,0 +1,164 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A104 — Athi River Town (Namanga Direction)",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": true,
+        "county": "Machakos",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.9780, -1.4550],
+          [36.9820, -1.4600],
+          [36.9860, -1.4650]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A104 — Athi River to Kitengela",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "verified": true,
+        "county": "Kajiado",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.9860, -1.4650],
+          [36.9800, -1.4900],
+          [36.9750, -1.5150],
+          [36.9700, -1.5400],
+          [36.9650, -1.5650]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A104 — Kitengela Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": true,
+        "county": "Kajiado",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.9650, -1.5650],
+          [36.9610, -1.5720],
+          [36.9570, -1.5790]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A104 — Kitengela to Kajiado",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "verified": true,
+        "county": "Kajiado",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.9570, -1.5790],
+          [36.9300, -1.6200],
+          [36.9000, -1.6600],
+          [36.8700, -1.7000],
+          [36.8400, -1.7400],
+          [36.8100, -1.7800],
+          [36.7900, -1.8200]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A104 — Kajiado Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": true,
+        "county": "Kajiado",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.7900, -1.8200],
+          [36.7850, -1.8260],
+          [36.7800, -1.8320]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A104 — Kajiado to Namanga",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "verified": true,
+        "county": "Kajiado",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.7800, -1.8320],
+          [36.7500, -1.8800],
+          [36.7200, -1.9300],
+          [36.6900, -1.9800],
+          [36.6600, -2.0300],
+          [36.6300, -2.0800],
+          [36.6000, -2.1300],
+          [36.5800, -2.1700],
+          [36.5500, -2.5400]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A104 — Namanga Border Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area / Border town",
+        "verified": true,
+        "county": "Kajiado",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.5500, -2.5400],
+          [36.5460, -2.5450],
+          [36.5420, -2.5500]
+        ]
+      }
+    }
+  ]
+}

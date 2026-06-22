@@ -1,0 +1,96 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Oginga Odinga Street — Kisumu CBD",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Municipality",
+        "verified": true,
+        "county": "Kisumu",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [34.7550, -0.0920],
+          [34.7580, -0.0910],
+          [34.7610, -0.0900],
+          [34.7640, -0.0890]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Jomo Kenyatta Highway — Kisumu",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Municipality",
+        "verified": true,
+        "county": "Kisumu",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [34.7480, -0.0950],
+          [34.7520, -0.0930],
+          [34.7560, -0.0910],
+          [34.7600, -0.0890],
+          [34.7640, -0.0870]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Kisumu-Busia Road (within Kisumu)",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Municipality",
+        "verified": true,
+        "county": "Kisumu",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [34.7480, -0.0920],
+          [34.7400, -0.0900],
+          [34.7320, -0.0880],
+          [34.7240, -0.0860],
+          [34.7160, -0.0840]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Kisumu-Ahero Road (within Kisumu)",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Municipality",
+        "verified": true,
+        "county": "Kisumu",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [34.7640, -0.0890],
+          [34.7720, -0.0920],
+          [34.7800, -0.0950],
+          [34.7880, -0.0980],
+          [34.7960, -0.1010]
+        ]
+      }
+    }
+  ]
+}

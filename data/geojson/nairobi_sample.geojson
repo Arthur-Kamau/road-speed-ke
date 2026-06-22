@@ -4,11 +4,11 @@
     {
       "type": "Feature",
       "properties": {
-        "road_name": "Mombasa Road (A109)",
-        "speed_limit_kmh": 80,
-        "road_class": "highway",
+        "road_name": "Mombasa Road (A109) — CBD to Cabanas",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
         "direction": "both",
-        "source": "Traffic Act Cap 403 / NTSA Gazette Notice",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
         "verified": true,
         "county": "Nairobi",
         "last_updated": "2025-01-15"
@@ -16,23 +16,23 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [36.8219, -1.3191],
-          [36.8301, -1.3145],
-          [36.8389, -1.3102],
-          [36.8461, -1.3058],
-          [36.8527, -1.3011],
-          [36.8612, -1.2960]
+          [36.8219, -1.2968],
+          [36.8235, -1.2998],
+          [36.8251, -1.3035],
+          [36.8270, -1.3068],
+          [36.8290, -1.3102],
+          [36.8315, -1.3140]
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "road_name": "Thika Superhighway (A2)",
-        "speed_limit_kmh": 100,
+        "road_name": "Mombasa Road (A109) — Cabanas to JKIA",
+        "speed_limit_kmh": 80,
         "road_class": "highway",
         "direction": "both",
-        "source": "Kenya Gazette Notice / NTSA",
+        "source": "NTSA Posted Signage / Speed Camera Zone",
         "verified": true,
         "county": "Nairobi",
         "last_updated": "2025-01-15"
@@ -40,12 +40,107 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [36.8444, -1.2728],
-          [36.8520, -1.2584],
-          [36.8580, -1.2442],
-          [36.8620, -1.2310],
-          [36.8660, -1.2185],
-          [36.8720, -1.2042]
+          [36.8315, -1.3140],
+          [36.8380, -1.3165],
+          [36.8450, -1.3185],
+          [36.8520, -1.3195],
+          [36.8590, -1.3200],
+          [36.8660, -1.3210],
+          [36.8740, -1.3225]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Thika Superhighway (A2) — Pangani to Muthaiga",
+        "speed_limit_kmh": 80,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "NTSA Speed Camera Zone",
+        "verified": true,
+        "county": "Nairobi",
+        "last_updated": "2025-01-15"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.8390, -1.2680],
+          [36.8410, -1.2640],
+          [36.8430, -1.2600],
+          [36.8445, -1.2560],
+          [36.8460, -1.2520]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Thika Superhighway (A2) — Allsops to GSU",
+        "speed_limit_kmh": 80,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "NTSA Speed Camera Zone",
+        "verified": true,
+        "county": "Nairobi",
+        "last_updated": "2025-01-15"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.8460, -1.2520],
+          [36.8480, -1.2470],
+          [36.8500, -1.2420],
+          [36.8520, -1.2370],
+          [36.8540, -1.2320]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Thika Superhighway (A2) — Roysambu to Safari Park",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 — Dual carriageway",
+        "verified": true,
+        "county": "Nairobi",
+        "last_updated": "2025-01-15"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.8540, -1.2320],
+          [36.8580, -1.2250],
+          [36.8620, -1.2180],
+          [36.8660, -1.2110],
+          [36.8700, -1.2040]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Thika Superhighway (A2) — Safari Park to Ruiru",
+        "speed_limit_kmh": 110,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Dual carriageway highway Class 1(a)",
+        "verified": true,
+        "county": "Nairobi",
+        "last_updated": "2025-01-15"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.8700, -1.2040],
+          [36.8750, -1.1960],
+          [36.8800, -1.1880],
+          [36.8850, -1.1800],
+          [36.8900, -1.1720],
+          [36.8950, -1.1640],
+          [36.9000, -1.1560]
         ]
       }
     },
@@ -56,7 +151,7 @@
         "speed_limit_kmh": 50,
         "road_class": "urban",
         "direction": "both",
-        "source": "Traffic Act Cap 403 — Built-up area default",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
         "verified": true,
         "county": "Nairobi",
         "last_updated": "2025-01-15"
@@ -76,11 +171,11 @@
     {
       "type": "Feature",
       "properties": {
-        "road_name": "Waiyaki Way (A104)",
-        "speed_limit_kmh": 80,
-        "road_class": "highway",
+        "road_name": "Waiyaki Way (A104) — CBD to James Gichuru",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
         "direction": "both",
-        "source": "Traffic Act Cap 403 / NTSA Gazette Notice",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area; NTSA posted",
         "verified": true,
         "county": "Nairobi",
         "last_updated": "2025-01-15"
@@ -88,11 +183,35 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [36.7943, -1.2620],
-          [36.7840, -1.2598],
-          [36.7735, -1.2578],
-          [36.7632, -1.2562],
-          [36.7530, -1.2550]
+          [36.8120, -1.2710],
+          [36.8050, -1.2690],
+          [36.7980, -1.2670],
+          [36.7910, -1.2650],
+          [36.7840, -1.2630]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Waiyaki Way (A104) — Kangemi to Uthiru",
+        "speed_limit_kmh": 80,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "NTSA Speed Camera Zone",
+        "verified": true,
+        "county": "Nairobi",
+        "last_updated": "2025-01-15"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.7840, -1.2630],
+          [36.7760, -1.2610],
+          [36.7680, -1.2595],
+          [36.7600, -1.2580],
+          [36.7520, -1.2565],
+          [36.7440, -1.2550]
         ]
       }
     },
@@ -103,7 +222,7 @@
         "speed_limit_kmh": 50,
         "road_class": "urban",
         "direction": "both",
-        "source": "Traffic Act Cap 403 — Built-up area default",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
         "verified": false,
         "county": "Nairobi",
         "last_updated": "2025-01-15"
@@ -122,23 +241,30 @@
     {
       "type": "Feature",
       "properties": {
-        "road_name": "Nairobi Expressway",
-        "speed_limit_kmh": 110,
+        "road_name": "Nairobi Expressway — Full Length",
+        "speed_limit_kmh": 80,
         "road_class": "expressway",
         "direction": "both",
-        "source": "NTSA / Kenya National Highways Authority",
+        "source": "Moja Expressway / NTSA Directive — Curves and elevation restrict to 80 km/h",
         "verified": true,
         "county": "Nairobi",
-        "last_updated": "2025-01-15"
+        "last_updated": "2025-06-01"
       },
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [36.8295, -1.3170],
-          [36.8251, -1.3070],
-          [36.8220, -1.2970],
-          [36.8195, -1.2880],
-          [36.8180, -1.2790]
+          [36.8740, -1.3420],
+          [36.8620, -1.3340],
+          [36.8500, -1.3260],
+          [36.8400, -1.3180],
+          [36.8310, -1.3100],
+          [36.8250, -1.3010],
+          [36.8210, -1.2920],
+          [36.8190, -1.2840],
+          [36.8175, -1.2760],
+          [36.8165, -1.2680],
+          [36.8140, -1.2610],
+          [36.8100, -1.2560]
         ]
       }
     },
@@ -149,7 +275,7 @@
         "speed_limit_kmh": 50,
         "road_class": "urban",
         "direction": "both",
-        "source": "Traffic Act Cap 403 — Built-up area default",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
         "verified": false,
         "county": "Nairobi",
         "last_updated": "2025-01-15"
@@ -162,6 +288,100 @@
           [36.8640, -1.2948],
           [36.8730, -1.2960],
           [36.8820, -1.2972]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Ngong Road",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": false,
+        "county": "Nairobi",
+        "last_updated": "2025-01-15"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.8100, -1.2950],
+          [36.8020, -1.2980],
+          [36.7940, -1.3010],
+          [36.7860, -1.3045],
+          [36.7780, -1.3080],
+          [36.7700, -1.3115]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Limuru Road",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": false,
+        "county": "Nairobi",
+        "last_updated": "2025-01-15"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.8160, -1.2630],
+          [36.8120, -1.2570],
+          [36.8080, -1.2510],
+          [36.8040, -1.2450],
+          [36.8000, -1.2390]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Outering Road",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": false,
+        "county": "Nairobi",
+        "last_updated": "2025-01-15"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.8820, -1.2650],
+          [36.8850, -1.2730],
+          [36.8870, -1.2810],
+          [36.8880, -1.2890],
+          [36.8860, -1.2970],
+          [36.8830, -1.3050]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Kenyatta Avenue / Harambee Avenue (CBD)",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": true,
+        "county": "Nairobi",
+        "last_updated": "2025-01-15"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.8165, -1.2840],
+          [36.8200, -1.2845],
+          [36.8240, -1.2848],
+          [36.8280, -1.2850],
+          [36.8320, -1.2852]
         ]
       }
     }

@@ -1,0 +1,93 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Uganda Road — Eldoret CBD",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Municipality",
+        "verified": true,
+        "county": "Uasin Gishu",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [35.2680, 0.5140],
+          [35.2720, 0.5160],
+          [35.2760, 0.5180],
+          [35.2800, 0.5200]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Oloo Street — Eldoret CBD",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Municipality",
+        "verified": true,
+        "county": "Uasin Gishu",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [35.2740, 0.5120],
+          [35.2740, 0.5160],
+          [35.2740, 0.5200],
+          [35.2740, 0.5240]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Nandi Road — Eldoret",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Municipality",
+        "verified": true,
+        "county": "Uasin Gishu",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [35.2640, 0.5180],
+          [35.2600, 0.5220],
+          [35.2560, 0.5260],
+          [35.2520, 0.5300]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Eldoret-Iten Road (within Eldoret)",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Municipality",
+        "verified": true,
+        "county": "Uasin Gishu",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [35.2800, 0.5200],
+          [35.2900, 0.5250],
+          [35.3000, 0.5300],
+          [35.3100, 0.5350]
+        ]
+      }
+    }
+  ]
+}

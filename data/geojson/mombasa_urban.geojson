@@ -1,0 +1,139 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Moi Avenue — Mombasa CBD",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Municipality",
+        "verified": true,
+        "county": "Mombasa",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [39.6680, -4.0610],
+          [39.6710, -4.0580],
+          [39.6740, -4.0550],
+          [39.6770, -4.0520]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Digo Road — Mombasa",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Municipality",
+        "verified": true,
+        "county": "Mombasa",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [39.6640, -4.0530],
+          [39.6650, -4.0580],
+          [39.6660, -4.0630],
+          [39.6670, -4.0680],
+          [39.6680, -4.0730]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Nyali Road — Mombasa",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Municipality",
+        "verified": true,
+        "county": "Mombasa",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [39.6850, -4.0430],
+          [39.6900, -4.0380],
+          [39.6950, -4.0330],
+          [39.7000, -4.0280],
+          [39.7050, -4.0230]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Links Road — Nyali",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Municipality",
+        "verified": true,
+        "county": "Mombasa",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [39.7050, -4.0230],
+          [39.7100, -4.0180],
+          [39.7150, -4.0130],
+          [39.7200, -4.0080]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Jomo Kenyatta Avenue — Mombasa CBD",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Municipality",
+        "verified": true,
+        "county": "Mombasa",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [39.6580, -4.0560],
+          [39.6620, -4.0540],
+          [39.6660, -4.0520],
+          [39.6700, -4.0500]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Makupa Causeway — Mombasa",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Municipality",
+        "verified": true,
+        "county": "Mombasa",
+        "last_updated": "2025-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [39.6450, -4.0450],
+          [39.6500, -4.0470],
+          [39.6550, -4.0490],
+          [39.6600, -4.0510]
+        ]
+      }
+    }
+  ]
+}
