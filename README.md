@@ -81,28 +81,49 @@ speed/
 
 - Go 1.22+
 - PostgreSQL 16+ with PostGIS extension
-- Docker & Docker Compose (recommended for local dev)
+- Node.js 18+ and npm (for the frontend)
 - Chrome or Chromium (for the extension)
 
-### 1. Start the Database
+### Option A: Without Docker (local PostgreSQL)
+
+If you already have PostgreSQL running locally:
+
+#### 1. Create the database and enable PostGIS
 
 ```bash
-docker compose up -d
+psql -U your_user -d postgres -c "CREATE DATABASE speed_limit_ke;"
+psql -U your_user -d speed_limit_ke -c "CREATE EXTENSION IF NOT EXISTS postgis;"
 ```
 
-### 2. Run Migrations
+> **Note:** PostGIS must be installed on your system. On Ubuntu/Debian: `sudo apt install postgresql-17-postgis-3` (match your PG version).
+
+#### 2. Configure environment
 
 ```bash
-go run cmd/api/main.go migrate
+cp .env.example .env
 ```
 
-### 3. Seed Sample Data
+Edit `.env` to match your local PostgreSQL credentials:
+
+```
+DATABASE_URL=postgres://your_user:your_password@localhost:5432/speed_limit_ke?sslmode=disable
+PORT=8080
+GIN_MODE=debug
+```
+
+#### 3. Run migrations
+
+```bash
+psql "$DATABASE_URL" -f migrations/001_create_road_segments.up.sql
+```
+
+#### 4. Seed the data
 
 ```bash
 go run cmd/scraper/main.go --seed
 ```
 
-### 4. Start the API Server
+#### 5. Start the API server
 
 ```bash
 go run cmd/api/main.go serve
@@ -110,7 +131,49 @@ go run cmd/api/main.go serve
 
 The API will be available at `http://localhost:8080`.
 
-### 5. Load the Chrome Extension
+#### 6. Start the frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+The frontend will be available at `http://localhost:5173`.
+
+### Option B: With Docker
+
+If you prefer an isolated setup with Docker:
+
+#### 1. Start the database
+
+```bash
+docker compose up -d
+```
+
+#### 2. Configure environment
+
+```bash
+cp .env.example .env
+```
+
+The default `.env.example` credentials match the Docker container — no edits needed.
+
+#### 3. Run migrations, seed, and start
+
+```bash
+psql "$DATABASE_URL" -f migrations/001_create_road_segments.up.sql
+go run cmd/scraper/main.go --seed
+go run cmd/api/main.go serve
+```
+
+Or use the Makefile shortcut:
+
+```bash
+make dev
+```
+
+### Load the Chrome Extension
 
 1. Open `chrome://extensions/`
 2. Enable "Developer mode"
