@@ -1,0 +1,90 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Nyeri Urban Area — Major Roads",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": false,
+        "county": "Nyeri",
+        "last_updated": "2026-06-22"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.9400, -0.4200],
+          [36.9500, -0.4100],
+          [36.9600, -0.4000]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Nyeri to Karatina Highway",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "Traffic (Speed Limits) Rules LN 62/1975 — Single carriageway",
+        "verified": false,
+        "county": "Nyeri",
+        "last_updated": "2026-06-22"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.9600, -0.4000],
+          [37.0000, -0.4400],
+          [37.0500, -0.4800],
+          [37.1200, -0.4850]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Karatina Urban Area",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": false,
+        "county": "Nyeri",
+        "last_updated": "2026-06-22"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.1200, -0.4850],
+          [37.1300, -0.4800],
+          [37.1400, -0.4750]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Embu Urban Area — Major Roads",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": false,
+        "county": "Embu",
+        "last_updated": "2026-06-22"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.4400, -0.5400],
+          [37.4500, -0.5300],
+          [37.4600, -0.5200]
+        ]
+      }
+    }
+  ]
+}

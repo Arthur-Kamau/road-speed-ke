@@ -1,0 +1,114 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B3 Highway — Mai Mahiu to Narok",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "Traffic (Speed Limits) Rules LN 62/1975 — Single carriageway",
+        "verified": false,
+        "county": "Nakuru, Narok",
+        "last_updated": "2026-06-22"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.5800, -0.9800],
+          [36.4000, -1.0200],
+          [36.2000, -1.0500],
+          [36.0000, -1.0700],
+          [35.8800, -1.0800]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B3 Highway — Narok Urban Area",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": false,
+        "county": "Narok",
+        "last_updated": "2026-06-22"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [35.8800, -1.0800],
+          [35.8700, -1.0850],
+          [35.8600, -1.0900]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B3 Highway — Narok to Bomet",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "Traffic (Speed Limits) Rules LN 62/1975 — Single carriageway",
+        "verified": false,
+        "county": "Narok, Bomet",
+        "last_updated": "2026-06-22"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [35.8600, -1.0900],
+          [35.7000, -1.0000],
+          [35.5000, -0.9000],
+          [35.3500, -0.7900]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B3 Highway — Bomet Urban Area",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": false,
+        "county": "Bomet",
+        "last_updated": "2026-06-22"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [35.3500, -0.7900],
+          [35.3400, -0.7800],
+          [35.3300, -0.7700]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B3 Highway — Bomet to Kisii",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "Traffic (Speed Limits) Rules LN 62/1975 — Single carriageway",
+        "verified": false,
+        "county": "Bomet, Nyamira, Kisii",
+        "last_updated": "2026-06-22"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [35.3300, -0.7700],
+          [35.1500, -0.7500],
+          [34.9500, -0.7200],
+          [34.7800, -0.6800]
+        ]
+      }
+    }
+  ]
+}

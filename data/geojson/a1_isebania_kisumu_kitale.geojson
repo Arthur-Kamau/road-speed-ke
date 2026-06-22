@@ -1,0 +1,138 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A1 Highway — Isebania to Kisii",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "Traffic (Speed Limits) Rules LN 62/1975 — Single carriageway",
+        "verified": false,
+        "county": "Migori, Kisii",
+        "last_updated": "2026-06-22"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [34.4600, -1.2400],
+          [34.5000, -1.1500],
+          [34.6000, -0.9500],
+          [34.7000, -0.7500],
+          [34.7700, -0.6900]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A1 Highway — Kisii Urban Area",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": false,
+        "county": "Kisii",
+        "last_updated": "2026-06-22"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [34.7700, -0.6900],
+          [34.7750, -0.6800],
+          [34.7800, -0.6700]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A1 Highway — Kisii to Kisumu",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "Traffic (Speed Limits) Rules LN 62/1975 — Single carriageway",
+        "verified": false,
+        "county": "Kisii, Nyamira, Homa Bay, Kisumu",
+        "last_updated": "2026-06-22"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [34.7800, -0.6700],
+          [34.8000, -0.5500],
+          [34.8500, -0.4000],
+          [34.8000, -0.2500],
+          [34.7500, -0.1500]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A1 Highway — Kisumu to Kakamega",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "Traffic (Speed Limits) Rules LN 62/1975 — Single carriageway",
+        "verified": false,
+        "county": "Kisumu, Vihiga, Kakamega",
+        "last_updated": "2026-06-22"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [34.7500, -0.0500],
+          [34.7200, 0.0500],
+          [34.7400, 0.1500],
+          [34.7500, 0.2500]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A1 Highway — Kakamega Urban Area",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": false,
+        "county": "Kakamega",
+        "last_updated": "2026-06-22"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [34.7500, 0.2500],
+          [34.7520, 0.2800],
+          [34.7540, 0.3100]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A1 Highway — Kakamega to Kitale",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "Traffic (Speed Limits) Rules LN 62/1975 — Single carriageway",
+        "verified": false,
+        "county": "Kakamega, Bungoma, Trans Nzoia",
+        "last_updated": "2026-06-22"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [34.7540, 0.3100],
+          [34.7600, 0.4500],
+          [34.7700, 0.6100],
+          [34.8500, 0.8000],
+          [35.0000, 1.0000]
+        ]
+      }
+    }
+  ]
+}
