@@ -1,6 +1,8 @@
 import type { FeatureCollection, NominatimResult } from '$lib/types/speed';
 
-const API_BASE = 'http://localhost:8080/api/v1';
+const API_BASE = typeof window !== 'undefined' && window.location.hostname !== 'localhost'
+	? '/api/v1'
+	: 'http://localhost:8080/api/v1';
 const NOMINATIM = 'https://nominatim.openstreetmap.org';
 const OSRM = 'https://router.project-osrm.org';
 
