@@ -26,23 +26,103 @@
     {
       "type": "Feature",
       "properties": {
-        "road_name": "A2 — Thika to Kenol/Makutano",
+        "road_name": "A2 — Thika to Makenji",
         "speed_limit_kmh": 100,
         "road_class": "highway",
         "direction": "both",
         "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
         "verified": true,
         "county": "Murang'a",
-        "last_updated": "2025-06-01"
+        "last_updated": "2026-06-25"
       },
       "geometry": {
         "type": "LineString",
         "coordinates": [
           [37.0840, -1.0300],
-          [37.0900, -1.0100],
-          [37.0950, -0.9900],
-          [37.1000, -0.9700],
-          [37.1050, -0.9500],
+          [37.0870, -1.0150]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 — Makenji/Kabati",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Trading centre; NTSA speed cameras active",
+        "verified": false,
+        "county": "Murang'a",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.0870, -1.0150],
+          [37.0890, -1.0050],
+          [37.0900, -0.9950]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 — Kabati to Makuyu",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "verified": true,
+        "county": "Murang'a",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.0900, -0.9950],
+          [37.0920, -0.9800]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 — Makuyu Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": false,
+        "county": "Murang'a",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.0920, -0.9800],
+          [37.0930, -0.9720],
+          [37.0940, -0.9650]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 — Makuyu to Kenol/Makutano",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "verified": true,
+        "county": "Murang'a",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.0940, -0.9650],
+          [37.1000, -0.9500],
+          [37.1050, -0.9400],
           [37.1100, -0.9300]
         ]
       }
@@ -89,7 +169,28 @@
           [37.1300, -0.8000],
           [37.1350, -0.7600],
           [37.1400, -0.7200],
-          [37.1450, -0.6800]
+          [37.1430, -0.6870]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 — Sagana Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": false,
+        "county": "Kirinyaga",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.1430, -0.6870],
+          [37.1450, -0.6800],
+          [37.1470, -0.6730]
         ]
       }
     },
@@ -108,7 +209,7 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [37.1450, -0.6800],
+          [37.1470, -0.6730],
           [37.1400, -0.6400],
           [37.1350, -0.6000],
           [37.1300, -0.5600],

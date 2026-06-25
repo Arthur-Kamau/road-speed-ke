@@ -147,6 +147,50 @@
     {
       "type": "Feature",
       "properties": {
+        "road_name": "Thika Superhighway (A2) — Ruiru to Jomoko",
+        "speed_limit_kmh": 110,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Dual carriageway highway Class 1(a)",
+        "verified": false,
+        "county": "Kiambu",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.9000, -1.1560],
+          [36.9400, -1.1300],
+          [36.9800, -1.1050],
+          [37.0200, -1.0800],
+          [37.0450, -1.0620]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Thika Superhighway (A2) — Jomoko/Witeithie",
+        "speed_limit_kmh": 80,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "NTSA Speed Camera Zone; driver reports of 80 km/h enforcement",
+        "verified": false,
+        "county": "Kiambu",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.0450, -1.0620],
+          [37.0550, -1.0530],
+          [37.0690, -1.0420]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "road_name": "Uhuru Highway",
         "speed_limit_kmh": 50,
         "road_class": "urban",

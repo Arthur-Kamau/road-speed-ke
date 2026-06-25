@@ -4,14 +4,14 @@
     {
       "type": "Feature",
       "properties": {
-        "road_name": "Southern Bypass — Mombasa Rd Junction to Ngong Rd Interchange",
-        "speed_limit_kmh": 110,
+        "road_name": "Southern Bypass — Mombasa Rd Junction to Lang'ata",
+        "speed_limit_kmh": 80,
         "road_class": "highway",
         "direction": "both",
-        "source": "LN 62/1975 Schedule — Dual carriageway highway",
-        "verified": true,
+        "source": "NTSA Speed Camera Zone — Engineering safety assessment",
+        "verified": false,
         "county": "Nairobi",
-        "last_updated": "2025-06-01"
+        "last_updated": "2026-06-25"
       },
       "geometry": {
         "type": "LineString",
@@ -19,6 +19,25 @@
           [36.8700, -1.3400],
           [36.8550, -1.3420],
           [36.8400, -1.3440],
+          [36.8250, -1.3460]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Southern Bypass — Lang'ata to Ngong Rd Interchange",
+        "speed_limit_kmh": 80,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "NTSA Speed Camera Zone — Ngong Road Interchange",
+        "verified": false,
+        "county": "Nairobi",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
           [36.8250, -1.3460],
           [36.8100, -1.3470],
           [36.7950, -1.3475]
@@ -28,14 +47,14 @@
     {
       "type": "Feature",
       "properties": {
-        "road_name": "Southern Bypass — Ngong Rd Interchange to Kikuyu/Gitaru",
+        "road_name": "Southern Bypass — Ngong Rd to Karen/Dagoretti",
         "speed_limit_kmh": 80,
         "road_class": "highway",
         "direction": "both",
-        "source": "NTSA Speed Camera Zone / Virtual Weighbridge area",
-        "verified": true,
-        "county": "Kiambu",
-        "last_updated": "2025-06-01"
+        "source": "NTSA Speed Camera Zone — Engineering safety assessment",
+        "verified": false,
+        "county": "Nairobi",
+        "last_updated": "2026-06-25"
       },
       "geometry": {
         "type": "LineString",
@@ -43,6 +62,25 @@
           [36.7950, -1.3475],
           [36.7800, -1.3480],
           [36.7650, -1.3470],
+          [36.7500, -1.3450]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Southern Bypass — Karen to Kikuyu/Gitaru (Virtual Weighbridge)",
+        "speed_limit_kmh": 80,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "NTSA Speed Camera Zone — Virtual Weighbridge area",
+        "verified": true,
+        "county": "Kiambu",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
           [36.7500, -1.3450],
           [36.7350, -1.3420],
           [36.7200, -1.3380]
@@ -53,13 +91,13 @@
       "type": "Feature",
       "properties": {
         "road_name": "Eastern Bypass — Airport North Rd to Utawala",
-        "speed_limit_kmh": 110,
+        "speed_limit_kmh": 80,
         "road_class": "highway",
         "direction": "both",
-        "source": "LN 62/1975 Schedule — Dual carriageway (upgraded 2022)",
-        "verified": true,
+        "source": "NTSA Speed Camera Zone — Dual carriageway, 80 km/h enforced",
+        "verified": false,
         "county": "Nairobi",
-        "last_updated": "2025-06-01"
+        "last_updated": "2026-06-25"
       },
       "geometry": {
         "type": "LineString",
@@ -75,22 +113,42 @@
     {
       "type": "Feature",
       "properties": {
-        "road_name": "Eastern Bypass — Utawala/Ruai (Urban section)",
+        "road_name": "Eastern Bypass — Utawala to Kangundo Rd/Nairobi Gates",
         "speed_limit_kmh": 80,
         "road_class": "highway",
         "direction": "both",
-        "source": "NTSA Posted Signage — Built-up area transition",
+        "source": "NTSA Speed Camera Zone — Nairobi Gates Roundabout enforcement",
         "verified": false,
         "county": "Nairobi",
-        "last_updated": "2025-06-01"
+        "last_updated": "2026-06-25"
       },
       "geometry": {
         "type": "LineString",
         "coordinates": [
           [36.9100, -1.2650],
-          [36.9110, -1.2550],
-          [36.9100, -1.2450],
-          [36.9080, -1.2350]
+          [36.9150, -1.2550],
+          [36.9200, -1.2450]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Eastern Bypass — Nairobi Gates to Ruai",
+        "speed_limit_kmh": 80,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "NTSA Speed Camera Zone — Driver reports of instant fines",
+        "verified": false,
+        "county": "Nairobi",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.9200, -1.2450],
+          [36.9150, -1.2350],
+          [36.9080, -1.2250]
         ]
       }
     },
@@ -98,22 +156,20 @@
       "type": "Feature",
       "properties": {
         "road_name": "Eastern Bypass — Ruai to Thika Highway Interchange",
-        "speed_limit_kmh": 110,
+        "speed_limit_kmh": 80,
         "road_class": "highway",
         "direction": "both",
-        "source": "LN 62/1975 Schedule — Dual carriageway highway",
-        "verified": true,
+        "source": "NTSA Speed Camera Zone — 80 km/h enforced",
+        "verified": false,
         "county": "Kiambu",
-        "last_updated": "2025-06-01"
+        "last_updated": "2026-06-25"
       },
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [36.9080, -1.2350],
-          [36.9040, -1.2250],
-          [36.8980, -1.2150],
-          [36.8920, -1.2080],
-          [36.8860, -1.2020],
+          [36.9080, -1.2250],
+          [36.9000, -1.2150],
+          [36.8920, -1.2050],
           [36.8800, -1.1960]
         ]
       }
@@ -121,14 +177,36 @@
     {
       "type": "Feature",
       "properties": {
-        "road_name": "Western Bypass — Gitaru to Northern Bypass Junction",
-        "speed_limit_kmh": 110,
+        "road_name": "Eastern Bypass — Thika Highway to Ruiru",
+        "speed_limit_kmh": 80,
         "road_class": "highway",
         "direction": "both",
-        "source": "LN 62/1975 Schedule — Dual carriageway highway",
-        "verified": true,
+        "source": "NTSA Speed Camera Zone — 80 km/h enforced near Ruiru",
+        "verified": false,
         "county": "Kiambu",
-        "last_updated": "2025-06-01"
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.8800, -1.1960],
+          [36.8900, -1.1850],
+          [36.9000, -1.1700],
+          [36.9100, -1.1550]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Western Bypass — Gitaru to Wangige",
+        "speed_limit_kmh": 80,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "NTSA Speed Camera Zone — Design speed 80 km/h; Gitaru/Wangige enforcement",
+        "verified": false,
+        "county": "Kiambu",
+        "last_updated": "2026-06-25"
       },
       "geometry": {
         "type": "LineString",
@@ -137,6 +215,25 @@
           [36.7150, -1.3250],
           [36.7120, -1.3120],
           [36.7100, -1.2990],
+          [36.7090, -1.2860]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Western Bypass — Wangige to Ndenderu/Ruaka",
+        "speed_limit_kmh": 80,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "NTSA Speed Camera Zone — Design speed 80 km/h",
+        "verified": false,
+        "county": "Kiambu",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
           [36.7090, -1.2860],
           [36.7100, -1.2730],
           [36.7130, -1.2600],
@@ -154,7 +251,7 @@
         "source": "NTSA Speed Camera Zone",
         "verified": true,
         "county": "Kiambu",
-        "last_updated": "2025-06-01"
+        "last_updated": "2026-06-25"
       },
       "geometry": {
         "type": "LineString",
@@ -170,14 +267,14 @@
     {
       "type": "Feature",
       "properties": {
-        "road_name": "Northern Bypass — Wangige to Thika Road Junction",
+        "road_name": "Northern Bypass — Runda to Thindigua",
         "speed_limit_kmh": 80,
         "road_class": "highway",
         "direction": "both",
         "source": "NTSA Speed Camera Zone",
         "verified": true,
         "county": "Kiambu",
-        "last_updated": "2025-06-01"
+        "last_updated": "2026-06-25"
       },
       "geometry": {
         "type": "LineString",
@@ -186,8 +283,73 @@
           [36.7780, -1.2260],
           [36.7920, -1.2240],
           [36.8060, -1.2220],
+          [36.8200, -1.2200]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Northern Bypass — Thindigua to Thika Road Junction",
+        "speed_limit_kmh": 80,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "NTSA Speed Camera Zone",
+        "verified": true,
+        "county": "Kiambu",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
           [36.8200, -1.2200],
-          [36.8340, -1.2180]
+          [36.8340, -1.2180],
+          [36.8500, -1.2150],
+          [36.8650, -1.2120]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Northern Bypass — Thika Road to Kahawa West/Marurui",
+        "speed_limit_kmh": 80,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "NTSA Speed Camera Zone — 80 km/h enforced",
+        "verified": false,
+        "county": "Kiambu",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.8650, -1.2120],
+          [36.8800, -1.2080],
+          [36.8950, -1.2000],
+          [36.9050, -1.1900]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Northern Bypass — Marurui to Ruiru",
+        "speed_limit_kmh": 80,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "NTSA Speed Camera Zone — 80 km/h enforced near Ruiru",
+        "verified": false,
+        "county": "Kiambu",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.9050, -1.1900],
+          [36.9100, -1.1800],
+          [36.9150, -1.1700],
+          [36.9200, -1.1600]
         ]
       }
     }

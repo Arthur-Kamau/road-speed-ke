@@ -85,6 +85,72 @@
           [37.4600, -0.5200]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B6 — Embu to Runyenjes",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Single carriageway",
+        "verified": false,
+        "county": "Embu",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.4600, -0.5200],
+          [37.4650, -0.5000],
+          [37.4680, -0.4700],
+          [37.4700, -0.4400],
+          [37.4680, -0.4100]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B6 — Runyenjes Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "verified": false,
+        "county": "Embu",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.4680, -0.4100],
+          [37.4660, -0.3950],
+          [37.4640, -0.3800]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B6 — Runyenjes to Chuka",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Single carriageway",
+        "verified": false,
+        "county": "Embu, Tharaka-Nithi",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.4640, -0.3800],
+          [37.4600, -0.3500],
+          [37.4550, -0.3200],
+          [37.4500, -0.2900]
+        ]
+      }
     }
   ]
 }
