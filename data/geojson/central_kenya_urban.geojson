@@ -1,0 +1,365 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 \u2014 Murang'a Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Murang'a",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            37.1496,
+            -0.7225
+          ],
+          [
+            37.1526,
+            -0.721
+          ],
+          [
+            37.1556,
+            -0.7195
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 \u2014 Kiambu Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Kiambu",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            36.8326,
+            -1.1729
+          ],
+          [
+            36.8356,
+            -1.1714
+          ],
+          [
+            36.8386,
+            -1.1699
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 \u2014 Ruiru Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Kiambu",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            36.957,
+            -1.1465
+          ],
+          [
+            36.96,
+            -1.145
+          ],
+          [
+            36.963,
+            -1.1435
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 \u2014 Juja Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Kiambu",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            37.0102,
+            -1.103
+          ],
+          [
+            37.0132,
+            -1.1015
+          ],
+          [
+            37.0162,
+            -1.1
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B20 \u2014 Gatundu Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Kiambu",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            36.917,
+            -1.0515
+          ],
+          [
+            36.92,
+            -1.05
+          ],
+          [
+            36.923,
+            -1.0485
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 \u2014 Maragua Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Murang'a",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            37.1303,
+            -0.7848
+          ],
+          [
+            37.1333,
+            -0.7833
+          ],
+          [
+            37.1363,
+            -0.7818
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B6 \u2014 Kerugoya Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Kirinyaga",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            37.2773,
+            -0.5004
+          ],
+          [
+            37.2803,
+            -0.4989
+          ],
+          [
+            37.2833,
+            -0.4974
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "C74 \u2014 Kutus Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Kirinyaga",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            37.3223,
+            -0.575
+          ],
+          [
+            37.3253,
+            -0.5735
+          ],
+          [
+            37.3283,
+            -0.572
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "C77 \u2014 Ol Kalou Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Nyandarua",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            36.3762,
+            -0.2724
+          ],
+          [
+            36.3792,
+            -0.2709
+          ],
+          [
+            36.3822,
+            -0.2694
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B5 \u2014 Nyahururu Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Laikipia",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            36.3604,
+            0.0366
+          ],
+          [
+            36.3634,
+            0.0381
+          ],
+          [
+            36.3664,
+            0.0396
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B5 \u2014 Engineer Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Nyandarua",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            36.602,
+            -0.6365
+          ],
+          [
+            36.605,
+            -0.635
+          ],
+          [
+            36.608,
+            -0.6335
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 \u2014 Githurai",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Kiambu",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            36.9165,
+            -1.2063
+          ],
+          [
+            36.9195,
+            -1.2048
+          ],
+          [
+            36.9225,
+            -1.2033
+          ]
+        ]
+      }
+    }
+  ]
+}

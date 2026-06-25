@@ -1,0 +1,365 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B6 \u2014 Meru Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Meru",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            37.6529,
+            0.0448
+          ],
+          [
+            37.6559,
+            0.0463
+          ],
+          [
+            37.6589,
+            0.0478
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B6 \u2014 Chuka Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Tharaka-Nithi",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            37.6429,
+            -0.3347
+          ],
+          [
+            37.6459,
+            -0.3332
+          ],
+          [
+            37.6489,
+            -0.3317
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 \u2014 Isiolo Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Isiolo",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            37.5792,
+            0.3531
+          ],
+          [
+            37.5822,
+            0.3546
+          ],
+          [
+            37.5852,
+            0.3561
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "C99 \u2014 Machakos Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Machakos",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            37.2604,
+            -1.5192
+          ],
+          [
+            37.2634,
+            -1.5177
+          ],
+          [
+            37.2664,
+            -1.5162
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B7 \u2014 Kitui Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Kitui",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            38.0076,
+            -1.3685
+          ],
+          [
+            38.0106,
+            -1.367
+          ],
+          [
+            38.0136,
+            -1.3655
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "C98 \u2014 Kangundo Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Machakos",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            37.3441,
+            -1.2994
+          ],
+          [
+            37.3471,
+            -1.2979
+          ],
+          [
+            37.3501,
+            -1.2964
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A3 \u2014 Matuu Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Machakos",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            37.5451,
+            -1.1422
+          ],
+          [
+            37.5481,
+            -1.1407
+          ],
+          [
+            37.5511,
+            -1.1392
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B7 \u2014 Mwingi Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Kitui",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            38.0571,
+            -0.9359
+          ],
+          [
+            38.0601,
+            -0.9344
+          ],
+          [
+            38.0631,
+            -0.9329
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "B6 \u2014 Nkubu Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Meru",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            37.6637,
+            -0.0682
+          ],
+          [
+            37.6667,
+            -0.0667
+          ],
+          [
+            37.6697,
+            -0.0652
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "C91 \u2014 Maua Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Meru",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            37.9375,
+            0.2306
+          ],
+          [
+            37.9405,
+            0.2321
+          ],
+          [
+            37.9435,
+            0.2336
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A109 \u2014 Syokimau",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Machakos",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            36.9048,
+            -1.3589
+          ],
+          [
+            36.9078,
+            -1.3574
+          ],
+          [
+            36.9108,
+            -1.3559
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A109 \u2014 Mlolongo",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Machakos",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            36.9359,
+            -1.3861
+          ],
+          [
+            36.9389,
+            -1.3846
+          ],
+          [
+            36.9419,
+            -1.3831
+          ]
+        ]
+      }
+    }
+  ]
+}

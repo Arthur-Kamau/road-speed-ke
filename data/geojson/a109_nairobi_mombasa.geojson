@@ -4,11 +4,11 @@
     {
       "type": "Feature",
       "properties": {
-        "road_name": "A109 — Athi River Town",
+        "road_name": "A109 \u2014 Athi River Town",
         "speed_limit_kmh": 50,
         "road_class": "urban",
         "direction": "both",
-        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
         "verified": true,
         "county": "Machakos",
         "last_updated": "2025-06-01"
@@ -16,21 +16,33 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [36.9590, -1.4510],
-          [36.9680, -1.4530],
-          [36.9770, -1.4545],
-          [36.9860, -1.4560]
+          [
+            36.959,
+            -1.451
+          ],
+          [
+            36.968,
+            -1.453
+          ],
+          [
+            36.977,
+            -1.4545
+          ],
+          [
+            36.986,
+            -1.456
+          ]
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "road_name": "A109 — Athi River to Machakos Junction",
+        "road_name": "A109 \u2014 Athi River to Machakos Junction",
         "speed_limit_kmh": 100,
         "road_class": "highway",
         "direction": "both",
-        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "source": "LN 62/1975 Schedule \u2014 Single carriageway Class 1(a)",
         "verified": true,
         "county": "Machakos",
         "last_updated": "2025-06-01"
@@ -38,22 +50,37 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [36.9860, -1.4560],
-          [37.0100, -1.4650],
-          [37.0350, -1.4780],
-          [37.0600, -1.4920],
-          [37.0850, -1.5060]
+          [
+            36.986,
+            -1.456
+          ],
+          [
+            37.01,
+            -1.465
+          ],
+          [
+            37.035,
+            -1.478
+          ],
+          [
+            37.06,
+            -1.492
+          ],
+          [
+            37.085,
+            -1.506
+          ]
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "road_name": "A109 — Machakos Junction to Sultan Hamud",
+        "road_name": "A109 \u2014 Machakos Junction to Sultan Hamud",
         "speed_limit_kmh": 100,
         "road_class": "highway",
         "direction": "both",
-        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "source": "LN 62/1975 Schedule \u2014 Single carriageway Class 1(a)",
         "verified": true,
         "county": "Makueni",
         "last_updated": "2025-06-01"
@@ -61,24 +88,45 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [37.0850, -1.5060],
-          [37.1200, -1.5400],
-          [37.1600, -1.5800],
-          [37.2000, -1.6200],
-          [37.2400, -1.6600],
-          [37.2800, -1.7000],
-          [37.3200, -1.7400]
+          [
+            37.085,
+            -1.506
+          ],
+          [
+            37.12,
+            -1.54
+          ],
+          [
+            37.16,
+            -1.58
+          ],
+          [
+            37.2,
+            -1.62
+          ],
+          [
+            37.24,
+            -1.66
+          ],
+          [
+            37.28,
+            -1.7
+          ],
+          [
+            37.32,
+            -1.74
+          ]
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "road_name": "A109 — Sultan Hamud Town",
+        "road_name": "A109 \u2014 Sultan Hamud Town",
         "speed_limit_kmh": 50,
         "road_class": "urban",
         "direction": "both",
-        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
         "verified": true,
         "county": "Makueni",
         "last_updated": "2025-06-01"
@@ -86,20 +134,29 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [37.3200, -1.7400],
-          [37.3260, -1.7440],
-          [37.3320, -1.7480]
+          [
+            37.32,
+            -1.74
+          ],
+          [
+            37.326,
+            -1.744
+          ],
+          [
+            37.332,
+            -1.748
+          ]
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "road_name": "A109 — Sultan Hamud to Makindu",
+        "road_name": "A109 \u2014 Sultan Hamud to Makindu",
         "speed_limit_kmh": 100,
         "road_class": "highway",
         "direction": "both",
-        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "source": "LN 62/1975 Schedule \u2014 Single carriageway Class 1(a)",
         "verified": true,
         "county": "Makueni",
         "last_updated": "2025-06-01"
@@ -107,23 +164,41 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [37.3320, -1.7480],
-          [37.3800, -1.7850],
-          [37.4300, -1.8200],
-          [37.4800, -1.8550],
-          [37.5300, -1.8900],
-          [37.5800, -1.9250]
+          [
+            37.332,
+            -1.748
+          ],
+          [
+            37.38,
+            -1.785
+          ],
+          [
+            37.43,
+            -1.82
+          ],
+          [
+            37.48,
+            -1.855
+          ],
+          [
+            37.53,
+            -1.89
+          ],
+          [
+            37.58,
+            -1.925
+          ]
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "road_name": "A109 — Makindu Town",
+        "road_name": "A109 \u2014 Makindu Town",
         "speed_limit_kmh": 50,
         "road_class": "urban",
         "direction": "both",
-        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
         "verified": true,
         "county": "Makueni",
         "last_updated": "2025-06-01"
@@ -131,20 +206,29 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [37.5800, -1.9250],
-          [37.5860, -1.9280],
-          [37.5920, -1.9310]
+          [
+            37.58,
+            -1.925
+          ],
+          [
+            37.586,
+            -1.928
+          ],
+          [
+            37.592,
+            -1.931
+          ]
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "road_name": "A109 — Makindu to Mtito Andei",
+        "road_name": "A109 \u2014 Makindu to Mtito Andei",
         "speed_limit_kmh": 100,
         "road_class": "highway",
         "direction": "both",
-        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "source": "LN 62/1975 Schedule \u2014 Single carriageway Class 1(a)",
         "verified": true,
         "county": "Makueni",
         "last_updated": "2025-06-01"
@@ -152,24 +236,45 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [37.5920, -1.9310],
-          [37.6500, -1.9700],
-          [37.7100, -2.0100],
-          [37.7700, -2.0500],
-          [37.8300, -2.0900],
-          [37.8900, -2.1300],
-          [37.9500, -2.1700]
+          [
+            37.592,
+            -1.931
+          ],
+          [
+            37.65,
+            -1.97
+          ],
+          [
+            37.71,
+            -2.01
+          ],
+          [
+            37.77,
+            -2.05
+          ],
+          [
+            37.83,
+            -2.09
+          ],
+          [
+            37.89,
+            -2.13
+          ],
+          [
+            37.95,
+            -2.17
+          ]
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "road_name": "A109 — Mtito Andei Town",
+        "road_name": "A109 \u2014 Mtito Andei Town",
         "speed_limit_kmh": 50,
         "road_class": "urban",
         "direction": "both",
-        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
         "verified": true,
         "county": "Makueni",
         "last_updated": "2025-06-01"
@@ -177,20 +282,29 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [37.9500, -2.1700],
-          [37.9560, -2.1730],
-          [37.9620, -2.1760]
+          [
+            37.95,
+            -2.17
+          ],
+          [
+            37.956,
+            -2.173
+          ],
+          [
+            37.962,
+            -2.176
+          ]
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "road_name": "A109 — Mtito Andei to Voi",
+        "road_name": "A109 \u2014 Mtito Andei to Voi",
         "speed_limit_kmh": 100,
         "road_class": "highway",
         "direction": "both",
-        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "source": "LN 62/1975 Schedule \u2014 Single carriageway Class 1(a)",
         "verified": true,
         "county": "Taita-Taveta",
         "last_updated": "2025-06-01"
@@ -198,27 +312,57 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [37.9620, -2.1760],
-          [38.0300, -2.2200],
-          [38.1000, -2.2700],
-          [38.1700, -2.3200],
-          [38.2400, -2.3700],
-          [38.3100, -2.4200],
-          [38.3800, -2.4700],
-          [38.4500, -2.5200],
-          [38.5200, -2.5700],
-          [38.5600, -3.3930]
+          [
+            37.962,
+            -2.176
+          ],
+          [
+            38.03,
+            -2.22
+          ],
+          [
+            38.1,
+            -2.27
+          ],
+          [
+            38.17,
+            -2.32
+          ],
+          [
+            38.24,
+            -2.37
+          ],
+          [
+            38.31,
+            -2.42
+          ],
+          [
+            38.38,
+            -2.47
+          ],
+          [
+            38.45,
+            -2.52
+          ],
+          [
+            38.52,
+            -2.57
+          ],
+          [
+            38.56,
+            -3.393
+          ]
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "road_name": "A109 — Voi Town",
+        "road_name": "A109 \u2014 Voi Town",
         "speed_limit_kmh": 50,
         "road_class": "urban",
         "direction": "both",
-        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
         "verified": true,
         "county": "Taita-Taveta",
         "last_updated": "2025-06-01"
@@ -226,21 +370,33 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [38.5600, -3.3930],
-          [38.5650, -3.3960],
-          [38.5700, -3.3990],
-          [38.5750, -3.4020]
+          [
+            38.56,
+            -3.393
+          ],
+          [
+            38.565,
+            -3.396
+          ],
+          [
+            38.57,
+            -3.399
+          ],
+          [
+            38.575,
+            -3.402
+          ]
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "road_name": "A109 — Voi to Mariakani",
+        "road_name": "A109 \u2014 Voi to Mariakani",
         "speed_limit_kmh": 100,
         "road_class": "highway",
         "direction": "both",
-        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "source": "LN 62/1975 Schedule \u2014 Single carriageway Class 1(a)",
         "verified": true,
         "county": "Kwale",
         "last_updated": "2025-06-01"
@@ -248,25 +404,49 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [38.5750, -3.4020],
-          [38.6500, -3.4500],
-          [38.7300, -3.5000],
-          [38.8100, -3.5500],
-          [38.8900, -3.6000],
-          [38.9700, -3.6500],
-          [39.0500, -3.7000],
-          [39.4550, -3.8700]
+          [
+            38.575,
+            -3.402
+          ],
+          [
+            38.65,
+            -3.45
+          ],
+          [
+            38.73,
+            -3.5
+          ],
+          [
+            38.81,
+            -3.55
+          ],
+          [
+            38.89,
+            -3.6
+          ],
+          [
+            38.97,
+            -3.65
+          ],
+          [
+            39.05,
+            -3.7
+          ],
+          [
+            39.455,
+            -3.87
+          ]
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "road_name": "A109 — Mariakani Town",
+        "road_name": "A109 \u2014 Mariakani Town",
         "speed_limit_kmh": 50,
         "road_class": "urban",
         "direction": "both",
-        "source": "Traffic Act Cap 403, Section 42 — Built-up area",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
         "verified": true,
         "county": "Kilifi",
         "last_updated": "2025-06-01"
@@ -274,20 +454,29 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [39.4550, -3.8700],
-          [39.4600, -3.8730],
-          [39.4650, -3.8760]
+          [
+            39.455,
+            -3.87
+          ],
+          [
+            39.46,
+            -3.873
+          ],
+          [
+            39.465,
+            -3.876
+          ]
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "road_name": "A109 — Mariakani to Mombasa",
+        "road_name": "A109 \u2014 Mariakani to Mombasa",
         "speed_limit_kmh": 80,
         "road_class": "highway",
         "direction": "both",
-        "source": "LN 62/1975 — Being upgraded to dual carriageway",
+        "source": "LN 62/1975 \u2014 Being upgraded to dual carriageway",
         "verified": true,
         "county": "Mombasa",
         "last_updated": "2025-06-01"
@@ -295,13 +484,94 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [39.4650, -3.8760],
-          [39.4900, -3.8950],
-          [39.5150, -3.9150],
-          [39.5400, -3.9350],
-          [39.5650, -3.9550],
-          [39.5900, -3.9750],
-          [39.6150, -3.9950]
+          [
+            39.465,
+            -3.876
+          ],
+          [
+            39.49,
+            -3.895
+          ],
+          [
+            39.515,
+            -3.915
+          ],
+          [
+            39.54,
+            -3.935
+          ],
+          [
+            39.565,
+            -3.955
+          ],
+          [
+            39.59,
+            -3.975
+          ],
+          [
+            39.615,
+            -3.995
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A109 \u2014 Syokimau",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Machakos",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            36.9048,
+            -1.3589
+          ],
+          [
+            36.9078,
+            -1.3574
+          ],
+          [
+            36.9108,
+            -1.3559
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A109 \u2014 Mlolongo",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Machakos",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            36.9359,
+            -1.3861
+          ],
+          [
+            36.9389,
+            -1.3846
+          ],
+          [
+            36.9419,
+            -1.3831
+          ]
         ]
       }
     }

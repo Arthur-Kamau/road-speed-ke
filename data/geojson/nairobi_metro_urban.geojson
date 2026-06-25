@@ -1,0 +1,185 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "C61 \u2014 Ngong Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Kajiado",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            36.6536,
+            -1.3633
+          ],
+          [
+            36.6566,
+            -1.3618
+          ],
+          [
+            36.6596,
+            -1.3603
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "C58 \u2014 Ongata Rongai Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Kajiado",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            36.7413,
+            -1.3954
+          ],
+          [
+            36.7443,
+            -1.3939
+          ],
+          [
+            36.7473,
+            -1.3924
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A104 \u2014 Kangemi",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Nairobi",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            36.747,
+            -1.2682
+          ],
+          [
+            36.75,
+            -1.2667
+          ],
+          [
+            36.753,
+            -1.2652
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 \u2014 Kahawa",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Nairobi",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            36.927,
+            -1.1915
+          ],
+          [
+            36.93,
+            -1.19
+          ],
+          [
+            36.933,
+            -1.1885
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 \u2014 Kasarani",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Nairobi",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            36.8982,
+            -1.2224
+          ],
+          [
+            36.9012,
+            -1.2209
+          ],
+          [
+            36.9042,
+            -1.2194
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "Eastern Bypass \u2014 Utawala",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Nairobi",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            36.9637,
+            -1.2744
+          ],
+          [
+            36.9667,
+            -1.2729
+          ],
+          [
+            36.9697,
+            -1.2714
+          ]
+        ]
+      }
+    }
+  ]
+}

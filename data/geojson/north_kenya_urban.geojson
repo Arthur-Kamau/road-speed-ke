@@ -1,0 +1,215 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A3 \u2014 Garissa Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Garissa",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            39.643,
+            -0.4543
+          ],
+          [
+            39.646,
+            -0.4528
+          ],
+          [
+            39.649,
+            -0.4513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A13 \u2014 Mandera Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Mandera",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            41.8539,
+            3.9358
+          ],
+          [
+            41.8569,
+            3.9373
+          ],
+          [
+            41.8599,
+            3.9388
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A13 \u2014 Wajir Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Wajir",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            40.0543,
+            1.7456
+          ],
+          [
+            40.0573,
+            1.7471
+          ],
+          [
+            40.0603,
+            1.7486
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A1 \u2014 Lodwar Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Turkana",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            35.5943,
+            3.1176
+          ],
+          [
+            35.5973,
+            3.1191
+          ],
+          [
+            35.6003,
+            3.1206
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 \u2014 Marsabit Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Marsabit",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            37.9869,
+            2.3269
+          ],
+          [
+            37.9899,
+            2.3284
+          ],
+          [
+            37.9929,
+            2.3299
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "C77 \u2014 Maralal Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Samburu",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            36.695,
+            1.0953
+          ],
+          [
+            36.698,
+            1.0968
+          ],
+          [
+            36.701,
+            1.0983
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 \u2014 Moyale Town",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "verified": false,
+        "county": "Marsabit",
+        "last_updated": "2026-06-25"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            39.0517,
+            3.5201
+          ],
+          [
+            39.0547,
+            3.5216
+          ],
+          [
+            39.0577,
+            3.5231
+          ]
+        ]
+      }
+    }
+  ]
+}
