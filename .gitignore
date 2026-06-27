@@ -1,4 +1,6 @@
 .env
+deploy.sh
+bin/
 *.exe
 *.exe~
 *.dll
