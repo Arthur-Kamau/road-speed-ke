@@ -64,6 +64,7 @@ python3 -c "import json,glob; ... " > frontend/static/speeds.json
 - **Route-to-speed matching** happens client-side in `frontend/src/lib/services/matcher.ts` — it finds the nearest speed limit segment within 200m of each route point.
 - **Nairobi Expressway** is 80 km/h (not the dual carriageway default of 110), per NTSA directive. This is a deliberate exception.
 - **Speed limits come from Kenya Traffic Act Cap 403 Section 42 and Legal Notice 62/1975**. Legal sources are documented in `data/LEGAL_SOURCES.md`.
+- **Feedback email**: kamaukenn11@gmail.com — shown in the webapp sidebar footer and feedback section.
 
 ## Database
 
