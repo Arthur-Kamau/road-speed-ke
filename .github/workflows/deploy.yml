@@ -1,0 +1,76 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
+      - name: Build binaries
+        run: |
+          GOOS=linux GOARCH=amd64 go build -o bin/api cmd/api/main.go
+          GOOS=linux GOARCH=amd64 go build -o bin/scraper cmd/scraper/main.go
+
+      - name: Build frontend
+        run: |
+          cd frontend
+          npm install -g pnpm
+          pnpm install
+          pnpm run build
+
+      - name: Deploy
+        env:
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$DEPLOY_SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts
+
+          SSH="ssh -i ~/.ssh/deploy_key $DEPLOY_USER@$DEPLOY_HOST"
+          SCP_FLAGS="-i ~/.ssh/deploy_key"
+
+          # Ship binaries, frontend, migrations, and GeoJSON data
+          rsync -avz --compress-level=9 -e "ssh -i ~/.ssh/deploy_key" \
+            bin/api bin/scraper "$DEPLOY_USER@$DEPLOY_HOST:/home/deploy/app/bin-new/"
+
+          rsync -avz --compress-level=9 --delete -e "ssh -i ~/.ssh/deploy_key" \
+            frontend/build/ "$DEPLOY_USER@$DEPLOY_HOST:/home/deploy/app/frontend/build/"
+
+          rsync -avz -e "ssh -i ~/.ssh/deploy_key" \
+            migrations/ "$DEPLOY_USER@$DEPLOY_HOST:/home/deploy/app/migrations/"
+
+          rsync -avz -e "ssh -i ~/.ssh/deploy_key" \
+            data/geojson/ "$DEPLOY_USER@$DEPLOY_HOST:/home/deploy/app/data/geojson/"
+
+          # Run migrations, seed, hot-swap binary
+          $SSH bash << REMOTE
+            set -e
+            export DATABASE_URL="$DATABASE_URL"
+
+            # Migrations
+            migrate -path /home/deploy/app/migrations -database "\$DATABASE_URL" up
+
+            # Seed GeoJSON data
+            /home/deploy/app/bin-new/scraper --seed
+
+            # Hot-swap API binary and restart
+            systemctl stop speed-api
+            mv /home/deploy/app/bin-new/api /home/deploy/app/api
+            chmod +x /home/deploy/app/api
+            systemctl start speed-api
+            echo "Deploy complete"
+          REMOTE
