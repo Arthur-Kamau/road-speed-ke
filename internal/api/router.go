@@ -11,8 +11,8 @@ func NewRouter(queries *db.Queries) *gin.Engine {
 
 	r.Use(cors.New(cors.Config{
 		AllowOrigins:     []string{"*"},
-		AllowMethods:     []string{"GET"},
-		AllowHeaders:     []string{"Origin", "Content-Type"},
+		AllowMethods:     []string{"GET", "POST", "OPTIONS"},
+		AllowHeaders:     []string{"Origin", "Content-Type", "Accept"},
 		AllowCredentials: false,
 	}))
 
@@ -24,6 +24,10 @@ func NewRouter(queries *db.Queries) *gin.Engine {
 		v1.GET("/speeds/route", h.GetSpeedsByRoute)
 		v1.GET("/roads/:id", h.GetRoadByID)
 		v1.GET("/stats", h.GetStats)
+
+		v1.GET("/hazards", h.GetHazardsByBBox)
+		v1.POST("/hazards", h.ReportHazard)
+		v1.POST("/speeds/report", h.ReportSpeed)
 	}
 
 	r.GET("/health", func(c *gin.Context) {

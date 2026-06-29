@@ -2,21 +2,24 @@
 
 ## What This Project Is
 
-Open-source database of Kenyan road speed limits. Three delivery surfaces: a Go REST API backed by PostgreSQL+PostGIS, a SvelteKit web frontend with Leaflet maps, and a Chrome extension that overlays speed zones on Google Maps. The canonical speed data lives as GeoJSON files in `data/geojson/` — the database is populated from these files.
+Open-source database of Kenyan road speed limits and road hazards. Five delivery surfaces: a Go REST API backed by PostgreSQL+PostGIS, a SvelteKit web frontend with Leaflet maps, a Chrome extension that overlays speed zones on Google Maps, an Android Auto app (Car App Library), and a Kotlin Multiplatform mobile app. The canonical speed data lives as GeoJSON files in `data/geojson/` — the database is populated from these files. Hazard data (bumps, rumble strips, speed cameras) lives in `data/geojson/hazards/`.
 
 ## Architecture
 
 ```
-cmd/api/          → API server entrypoint (gin, port 8080)
-cmd/scraper/      → Data scraper / seed loader CLI
-internal/api/     → HTTP handlers + router (gin + cors)
-internal/db/      → PostgreSQL connection pool (pgx) + spatial queries
-internal/models/  → Go structs (RoadSegment, BBoxQuery, Stats)
-internal/scraper/ → Kenya Law scraper (colly) + GeoJSON seed loader
-data/geojson/     → Source-of-truth speed limit data (GeoJSON FeatureCollections)
-migrations/       → PostgreSQL + PostGIS DDL (golang-migrate format)
-frontend/         → SvelteKit 2 + Svelte 5 (runes mode) + Leaflet + TypeScript
-extension/        → Chrome Manifest V3 extension
+cmd/api/              → API server entrypoint (gin, port 8080)
+cmd/scraper/          → Data scraper / seed loader CLI
+internal/api/         → HTTP handlers + router (gin + cors)
+internal/db/          → PostgreSQL connection pool (pgx) + spatial queries
+internal/models/      → Go structs (RoadSegment, RoadHazard, BBoxQuery, Stats)
+internal/scraper/     → Kenya Law scraper (colly) + GeoJSON seed loader
+data/geojson/         → Source-of-truth speed limit data (GeoJSON FeatureCollections)
+data/geojson/hazards/ → Road hazard data (bumps, rumble strips, speed cameras)
+migrations/           → PostgreSQL + PostGIS DDL (golang-migrate format)
+frontend/             → SvelteKit 2 + Svelte 5 (runes mode) + Leaflet + TypeScript
+extension/            → Chrome Manifest V3 extension
+android-auto/         → Android Auto app (Car App Library 1.4.0, phone projection)
+kmp/                  → Kotlin Multiplatform app (Compose, OSMDroid map, Android target)
 ```
 
 ## Commands
@@ -64,6 +67,7 @@ python3 -c "import json,glob; ... " > frontend/static/speeds.json
 - **Route-to-speed matching** happens client-side in `frontend/src/lib/services/matcher.ts` — it finds the nearest speed limit segment within 200m of each route point.
 - **Nairobi Expressway** is 80 km/h (not the dual carriageway default of 110), per NTSA directive. This is a deliberate exception.
 - **Speed limits come from Kenya Traffic Act Cap 403 Section 42 and Legal Notice 62/1975**. Legal sources are documented in `data/LEGAL_SOURCES.md`.
+- **Feedback email**: kamaukenn11@gmail.com — shown in the webapp sidebar footer and feedback section.
 
 ## Database
 
@@ -81,6 +85,35 @@ GIN_MODE=debug
 ```
 
 Copy `.env.example` to `.env` for local development.
+
+## Hazard Types
+
+- `bump` — physical speed bump
+- `rumble_strip` — transverse rumble strips
+- `speed_camera` — fixed or frequent mobile NTSA camera position
+- `pothole` — severe pothole reported by driver
+
+Hazards are stored in `road_hazards` table (Point geometry) and served at `GET /api/v1/hazards?bbox=...`.
+Community-submitted hazards via `POST /api/v1/hazards` go in unverified state.
+Community-submitted speed observations via `POST /api/v1/speeds/report` go into `speed_reports` (reviewed before promoting to `road_segments`).
+
+## Android Auto App
+
+Built with Car App Library 1.4.0. Open in Android Studio: `File → Open → android-auto/`.
+Test with [Desktop Head Unit (DHU)](https://developer.android.com/training/cars/testing/dhu).
+- `mobile/` module = Android Auto phone projection (primary)
+- `automotive/` module = Automotive OS skeleton (future)
+
+## KMP Mobile App
+
+Compose Multiplatform, Android target. Open in Android Studio: `File → Open → kmp/`.
+Features: OSMDroid map with speed overlays + hazard markers, GPS proximity alerts (same 2km/1km logic),
+add speed limit report, add hazard report (both POST to deployed API).
+
+## Deployment
+
+`deploy.sh` is gitignored — copy `deploy.example.sh` to `deploy.sh` and fill in server details.
+Never commit `deploy.sh` — it contains server credentials.
 
 ## Speed Limit Rules (Kenya)
 

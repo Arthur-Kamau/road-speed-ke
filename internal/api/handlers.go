@@ -18,34 +18,35 @@ func NewHandler(queries *db.Queries) *Handler {
 	return &Handler{queries: queries}
 }
 
-func (h *Handler) GetSpeedsByBBox(c *gin.Context) {
+// parseBBox parses the ?bbox=minLat,minLng,maxLat,maxLng query parameter.
+// Returns false and writes the error response when invalid.
+func parseBBox(c *gin.Context) (models.BBoxQuery, bool) {
 	bboxStr := c.Query("bbox")
 	if bboxStr == "" {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "bbox parameter required (minLat,minLng,maxLat,maxLng)"})
-		return
+		return models.BBoxQuery{}, false
 	}
-
 	parts := strings.Split(bboxStr, ",")
 	if len(parts) != 4 {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "bbox must have 4 values: minLat,minLng,maxLat,maxLng"})
-		return
+		return models.BBoxQuery{}, false
 	}
-
 	coords := make([]float64, 4)
 	for i, p := range parts {
 		val, err := strconv.ParseFloat(strings.TrimSpace(p), 64)
 		if err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{"error": "invalid coordinate value"})
-			return
+			return models.BBoxQuery{}, false
 		}
 		coords[i] = val
 	}
+	return models.BBoxQuery{MinLat: coords[0], MinLng: coords[1], MaxLat: coords[2], MaxLng: coords[3]}, true
+}
 
-	bbox := models.BBoxQuery{
-		MinLat: coords[0],
-		MinLng: coords[1],
-		MaxLat: coords[2],
-		MaxLng: coords[3],
+func (h *Handler) GetSpeedsByBBox(c *gin.Context) {
+	bbox, ok := parseBBox(c)
+	if !ok {
+		return
 	}
 
 	segments, err := h.queries.GetByBBox(c.Request.Context(), bbox)

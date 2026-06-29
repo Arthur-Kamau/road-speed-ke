@@ -1,0 +1,65 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "hazard_type": "bump",
+        "description": "Speed bump near St. Austin's Academy",
+        "source": "verified",
+        "verified": true
+      },
+      "geometry": { "type": "Point", "coordinates": [36.7895, -1.2921] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "hazard_type": "rumble_strip",
+        "description": "Rumble strips before Westlands roundabout",
+        "source": "verified",
+        "verified": true
+      },
+      "geometry": { "type": "Point", "coordinates": [36.8101, -1.2678] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "hazard_type": "speed_camera",
+        "description": "NTSA mobile unit frequent position — Mombasa Road near SGR flyover",
+        "source": "driver_report",
+        "verified": false
+      },
+      "geometry": { "type": "Point", "coordinates": [36.8701, -1.3312] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "hazard_type": "bump",
+        "description": "Speed bump at Langata Road / Karen junction",
+        "source": "verified",
+        "verified": true
+      },
+      "geometry": { "type": "Point", "coordinates": [36.7234, -1.3201] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "hazard_type": "rumble_strip",
+        "description": "Rumble strips on Thika Superhighway near exit 7",
+        "source": "verified",
+        "verified": true
+      },
+      "geometry": { "type": "Point", "coordinates": [36.8834, -1.2156] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "hazard_type": "speed_camera",
+        "description": "Fixed speed camera — Uhuru Highway near University Way",
+        "source": "ntsa_publication",
+        "verified": true
+      },
+      "geometry": { "type": "Point", "coordinates": [36.8172, -1.2908] }
+    }
+  ]
+}
