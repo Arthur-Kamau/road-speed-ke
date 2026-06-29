@@ -60,17 +60,18 @@ jobs:
           $SSH bash << REMOTE
             set -e
             export DATABASE_URL="$DATABASE_URL"
+            cd /home/deploy/app
 
             # Migrations
-            migrate -path /home/deploy/app/migrations -database "\$DATABASE_URL" up
+            migrate -path migrations -database "\$DATABASE_URL" up
 
-            # Seed GeoJSON data
-            /home/deploy/app/bin-new/scraper --seed
+            # Seed GeoJSON data (ON CONFLICT DO NOTHING, safe to re-run)
+            ./bin-new/scraper --seed
 
             # Hot-swap API binary and restart
             systemctl stop speed-api
-            mv /home/deploy/app/bin-new/api /home/deploy/app/api
-            chmod +x /home/deploy/app/api
+            mv bin-new/api api
+            chmod +x api
             systemctl start speed-api
             echo "Deploy complete"
           REMOTE
