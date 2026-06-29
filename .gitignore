@@ -1,6 +1,9 @@
 .env
 deploy.sh
 bin/
+# Mobile apps live in Arthur-Kamau/speed-ke-mobile
+kmp/
+android-auto/
 *.exe
 *.exe~
 *.dll
