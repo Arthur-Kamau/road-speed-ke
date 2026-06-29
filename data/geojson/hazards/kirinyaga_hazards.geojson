@@ -1,0 +1,15 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "hazard_type": "speed_camera",
+        "description": "NTSA fixed speed camera — A2 near Kibirigwi Girls Sec School. Fine ticket #34467 issued 2026-06-17. 30 km/h school zone.",
+        "source": "ntsa_enforcement",
+        "verified": true
+      },
+      "geometry": { "type": "Point", "coordinates": [37.1812, -0.5289] }
+    }
+  ]
+}
