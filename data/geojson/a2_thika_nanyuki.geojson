@@ -197,23 +197,89 @@
     {
       "type": "Feature",
       "properties": {
-        "road_name": "A2 — Sagana to Karatina",
+        "road_name": "A2 — Sagana to Kibirigwi",
+        "speed_limit_kmh": 100,
+        "road_class": "highway",
+        "direction": "both",
+        "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
+        "verified": true,
+        "county": "Kirinyaga",
+        "last_updated": "2026-06-29"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.1470, -0.6730],
+          [37.1600, -0.6200],
+          [37.1700, -0.5800],
+          [37.1750, -0.5550],
+          [37.1800, -0.5320]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 — Kibirigwi Girls School Zone",
+        "speed_limit_kmh": 30,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403 §42 — school zone; active NTSA speed camera confirmed (ticket #34467, 2026-06-17)",
+        "verified": true,
+        "county": "Kirinyaga",
+        "last_updated": "2026-06-29"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.1815, -0.5310],
+          [37.1812, -0.5289],
+          [37.1808, -0.5268]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 — Kibirigwi Trading Centre",
+        "speed_limit_kmh": 50,
+        "road_class": "urban",
+        "direction": "both",
+        "source": "Traffic Act Cap 403 §42 — built-up area (trading centre); NTSA enforcement active",
+        "verified": true,
+        "county": "Kirinyaga",
+        "last_updated": "2026-06-29"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.1800, -0.5320],
+          [37.1812, -0.5289],
+          [37.1800, -0.5260],
+          [37.1784, -0.5252],
+          [37.1770, -0.5220]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_name": "A2 — Kibirigwi to Karatina",
         "speed_limit_kmh": 100,
         "road_class": "highway",
         "direction": "both",
         "source": "LN 62/1975 Schedule — Single carriageway Class 1(a)",
         "verified": true,
         "county": "Nyeri",
-        "last_updated": "2025-06-01"
+        "last_updated": "2026-06-29"
       },
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [37.1470, -0.6730],
-          [37.1400, -0.6400],
-          [37.1350, -0.6000],
-          [37.1300, -0.5600],
-          [37.1250, -0.5200],
+          [37.1770, -0.5220],
+          [37.1700, -0.5000],
+          [37.1600, -0.4900],
+          [37.1400, -0.4850],
           [37.1200, -0.4800]
         ]
       }
