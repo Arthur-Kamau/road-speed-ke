@@ -33,26 +33,37 @@
 			.then((g) => {
 				const options: google.maps.places.AutocompleteOptions = {
 					componentRestrictions: { country: 'ke' },
-					fields: ['geometry', 'name']
+					fields: ['geometry', 'name', 'formatted_address']
 				};
 
-				const startAutocomplete = new g.maps.places.Autocomplete(startInputEl, options);
-				startAutocomplete.addListener('place_changed', () => {
-					const place = startAutocomplete.getPlace();
+				const startAc = new g.maps.places.Autocomplete(startInputEl, options);
+				startAc.addListener('place_changed', () => {
+					const place = startAc.getPlace();
 					if (place.geometry?.location) {
 						startCoord = [place.geometry.location.lat(), place.geometry.location.lng()];
-						startQuery = place.name ?? startQuery;
+						startQuery = place.name ?? place.formatted_address ?? startInputEl.value;
 					}
 				});
 
-				const endAutocomplete = new g.maps.places.Autocomplete(endInputEl, options);
-				endAutocomplete.addListener('place_changed', () => {
-					const place = endAutocomplete.getPlace();
+				const endAc = new g.maps.places.Autocomplete(endInputEl, options);
+				endAc.addListener('place_changed', () => {
+					const place = endAc.getPlace();
 					if (place.geometry?.location) {
 						endCoord = [place.geometry.location.lat(), place.geometry.location.lng()];
-						endQuery = place.name ?? endQuery;
+						endQuery = place.name ?? place.formatted_address ?? endInputEl.value;
 					}
 				});
+
+				// Prevent the form from submitting when user presses Enter to select
+				// an autocomplete suggestion (Google fires keydown before place_changed)
+				const suppressEnter = (e: KeyboardEvent) => {
+					if (e.key === 'Enter') {
+						const pacVisible = document.querySelector('.pac-container:not([style*="display: none"])');
+						if (pacVisible) e.preventDefault();
+					}
+				};
+				startInputEl.addEventListener('keydown', suppressEnter);
+				endInputEl.addEventListener('keydown', suppressEnter);
 			})
 			.catch((e) => console.error('Google Places unavailable, using manual search', e));
 	});
@@ -87,6 +98,15 @@
 	}
 
 	async function resolveAndGo() {
+		// When using Google Places, read coordinates from the input if place_changed
+		// already fired — don't fall back to Nominatim geocode.
+		if (useGooglePlaces) {
+			if (startCoord && endCoord) {
+				onRoute(startCoord, endCoord);
+			}
+			return;
+		}
+
 		if (!startCoord && startQuery.length >= 2) {
 			const results = await geocode(startQuery);
 			if (results.length > 0) {
@@ -109,6 +129,10 @@
 	function handleSwap() {
 		[startQuery, endQuery] = [endQuery, startQuery];
 		[startCoord, endCoord] = [endCoord, startCoord];
+		if (useGooglePlaces) {
+			startInputEl.value = startQuery;
+			endInputEl.value = endQuery;
+		}
 	}
 
 	function handleKeydown(e: KeyboardEvent) {
@@ -340,5 +364,40 @@
 	.preview-btn:disabled {
 		background: #93c5fd;
 		cursor: not-allowed;
+	}
+
+	/* Google Places Autocomplete dropdown (rendered at body level) */
+	:global(.pac-container) {
+		z-index: 10000 !important;
+		border-radius: 8px;
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+		border: none;
+		margin-top: 4px;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	}
+
+	:global(.pac-item) {
+		padding: 8px 12px;
+		font-size: 13px;
+		cursor: pointer;
+		border-top: 1px solid #f0f0f0;
+	}
+
+	:global(.pac-item:first-child) {
+		border-top: none;
+	}
+
+	:global(.pac-item:hover),
+	:global(.pac-item-selected) {
+		background: #f0f4ff;
+	}
+
+	:global(.pac-icon) {
+		display: none;
+	}
+
+	:global(.pac-item-query) {
+		font-size: 13px;
+		color: #333;
 	}
 </style>

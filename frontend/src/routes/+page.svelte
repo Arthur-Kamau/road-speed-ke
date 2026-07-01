@@ -30,7 +30,7 @@
 
 	async function loadAllSpeeds() {
 		try {
-			const data = await fetchSpeedsByBBox(-5, 33, 2, 42);
+			const data = await fetchSpeedsByBBox(-5, 33, 6, 42);
 			allFeatures = data.features as SpeedFeature[];
 			apiAvailable = true;
 		} catch {
