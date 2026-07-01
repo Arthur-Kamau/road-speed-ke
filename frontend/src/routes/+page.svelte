@@ -1,11 +1,13 @@
 <script lang="ts">
-	import Map from '$lib/components/Map.svelte';
+	import LeafletMap from '$lib/components/Map.svelte';
+	import GoogleMap from '$lib/components/GoogleMap.svelte';
 	import RouteInput from '$lib/components/RouteInput.svelte';
 	import SpeedLegend from '$lib/components/SpeedLegend.svelte';
 	import RouteInfo from '$lib/components/RouteInfo.svelte';
 	import { getRoutes, fetchSpeedsByBBox } from '$lib/services/api';
 	import { matchRouteToSpeeds, type MatchedSegment } from '$lib/services/matcher';
 	import type { SpeedFeature, RouteOption } from '$lib/types/speed';
+	import { MAP_PROVIDER, GOOGLE_AVAILABLE } from '$lib/services/mapConfig';
 
 	let segments = $state<MatchedSegment[]>([]);
 	let startMarker = $state<[number, number] | null>(null);
@@ -16,6 +18,7 @@
 	let error = $state('');
 	let apiAvailable = $state(true);
 	let clickMode = $state<'start' | 'end' | null>(null);
+	let mapTiles = $state<'google' | 'osm'>(MAP_PROVIDER === 'google' ? 'google' : 'osm');
 
 	let routeOptions = $state<RouteOption[]>([]);
 	let selectedRouteIndex = $state(0);
@@ -179,7 +182,26 @@
 	</div>
 
 	<div class="map-area">
-		<Map {segments} {alternativeRoutes} {startMarker} {endMarker} onMapClick={handleMapClick} />
+		{#if GOOGLE_AVAILABLE}
+			<div class="map-toggle">
+				<button
+					class="toggle-btn"
+					class:active={mapTiles === 'google'}
+					onclick={() => (mapTiles = 'google')}
+				>Google Maps</button>
+				<button
+					class="toggle-btn"
+					class:active={mapTiles === 'osm'}
+					onclick={() => (mapTiles = 'osm')}
+				>OpenStreetMap</button>
+			</div>
+		{/if}
+
+		{#if mapTiles === 'google'}
+			<GoogleMap {segments} {alternativeRoutes} {startMarker} {endMarker} onMapClick={handleMapClick} />
+		{:else}
+			<LeafletMap {segments} {alternativeRoutes} {startMarker} {endMarker} onMapClick={handleMapClick} />
+		{/if}
 	</div>
 </div>
 
@@ -214,6 +236,43 @@
 	.map-area {
 		flex: 1;
 		height: 100vh;
+		position: relative;
+	}
+
+	.map-toggle {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		z-index: 1000;
+		display: flex;
+		background: #fff;
+		border-radius: 8px;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+		overflow: hidden;
+	}
+
+	.toggle-btn {
+		padding: 6px 14px;
+		border: none;
+		background: #fff;
+		font-size: 12px;
+		font-weight: 600;
+		color: #666;
+		cursor: pointer;
+		transition: background 0.15s, color 0.15s;
+	}
+
+	.toggle-btn:not(:last-child) {
+		border-right: 1px solid #e5e5e5;
+	}
+
+	.toggle-btn.active {
+		background: #2563eb;
+		color: #fff;
+	}
+
+	.toggle-btn:hover:not(.active) {
+		background: #f0f0f0;
 	}
 
 	.header h1 {
