@@ -28,6 +28,13 @@ export interface RouteStep {
 	roadName: string;
 }
 
+export interface RouteOption {
+	coordinates: [number, number][];
+	distance: number;
+	duration: number;
+	summary: string;
+}
+
 export interface NominatimResult {
 	display_name: string;
 	lat: string;

@@ -5,12 +5,19 @@
 
 	interface Props {
 		segments?: MatchedSegment[];
+		alternativeRoutes?: [number, number][][];
 		startMarker?: [number, number] | null;
 		endMarker?: [number, number] | null;
 		onMapClick?: (lat: number, lng: number) => void;
 	}
 
-	let { segments = [], startMarker = null, endMarker = null, onMapClick }: Props = $props();
+	let {
+		segments = [],
+		alternativeRoutes = [],
+		startMarker = null,
+		endMarker = null,
+		onMapClick
+	}: Props = $props();
 
 	let mapContainer: HTMLDivElement;
 	let map: L.Map | null = $state(null);
@@ -65,12 +72,20 @@
 		const m = map;
 		const lg = layerGroup;
 		const segs = segments;
+		const alts = alternativeRoutes;
 		const sm = startMarker;
 		const em = endMarker;
 
 		if (!L || !m || !lg) return;
 
 		lg.clearLayers();
+
+		for (const alt of alts) {
+			const latlngs = alt.map((c) => L.latLng(c[0], c[1]));
+			lg.addLayer(
+				L.polyline(latlngs, { color: '#6b7280', weight: 4, opacity: 0.6, dashArray: '1 8' })
+			);
+		}
 
 		for (const seg of segs) {
 			const color = getSpeedColor(seg.speedLimit);

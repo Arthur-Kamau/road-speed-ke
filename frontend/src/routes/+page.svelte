@@ -3,9 +3,9 @@
 	import RouteInput from '$lib/components/RouteInput.svelte';
 	import SpeedLegend from '$lib/components/SpeedLegend.svelte';
 	import RouteInfo from '$lib/components/RouteInfo.svelte';
-	import { getRoute, fetchSpeedsByBBox } from '$lib/services/api';
+	import { getRoutes, fetchSpeedsByBBox } from '$lib/services/api';
 	import { matchRouteToSpeeds, type MatchedSegment } from '$lib/services/matcher';
-	import type { SpeedFeature } from '$lib/types/speed';
+	import type { SpeedFeature, RouteOption } from '$lib/types/speed';
 
 	let segments = $state<MatchedSegment[]>([]);
 	let startMarker = $state<[number, number] | null>(null);
@@ -16,6 +16,12 @@
 	let error = $state('');
 	let apiAvailable = $state(true);
 	let clickMode = $state<'start' | 'end' | null>(null);
+
+	let routeOptions = $state<RouteOption[]>([]);
+	let selectedRouteIndex = $state(0);
+	let alternativeRoutes = $derived(
+		routeOptions.filter((_, i) => i !== selectedRouteIndex).map((r) => r.coordinates)
+	);
 
 	let allFeatures = $state<SpeedFeature[]>([]);
 
@@ -43,32 +49,42 @@
 		endMarker = end;
 
 		try {
-			const route = await getRoute(start[0], start[1], end[0], end[1]);
-			if (!route) {
+			const routes = await getRoutes(start[0], start[1], end[0], end[1]);
+			if (routes.length === 0) {
 				error = 'Could not find a route between those points.';
 				segments = [];
+				routeOptions = [];
 				return;
 			}
 
-			routeDistance = route.distance;
-			routeDuration = route.duration;
-
-			if (allFeatures.length > 0) {
-				segments = matchRouteToSpeeds(route.coordinates, allFeatures);
-			} else {
-				segments = [
-					{
-						coordinates: route.coordinates,
-						speedLimit: null,
-						roadName: 'Route (no speed data loaded)'
-					}
-				];
-			}
+			routeOptions = routes;
+			selectRoute(0);
 		} catch (e) {
 			error = 'Failed to calculate route. Please try again.';
 			segments = [];
+			routeOptions = [];
 		} finally {
 			loading = false;
+		}
+	}
+
+	function selectRoute(index: number) {
+		const route = routeOptions[index];
+		if (!route) return;
+		selectedRouteIndex = index;
+		routeDistance = route.distance;
+		routeDuration = route.duration;
+
+		if (allFeatures.length > 0) {
+			segments = matchRouteToSpeeds(route.coordinates, allFeatures);
+		} else {
+			segments = [
+				{
+					coordinates: route.coordinates,
+					speedLimit: null,
+					roadName: 'Route (no speed data loaded)'
+				}
+			];
 		}
 	}
 
@@ -129,6 +145,23 @@
 			</div>
 		{/if}
 
+		{#if routeOptions.length > 1}
+			<div class="route-options">
+				{#each routeOptions as route, i}
+					<button
+						class="route-option"
+						class:active={i === selectedRouteIndex}
+						onclick={() => selectRoute(i)}
+					>
+						<span class="route-option-summary">{route.summary}</span>
+						<span class="route-option-meta">
+							{(route.distance / 1000).toFixed(1)} km · {Math.round(route.duration / 60)} min
+						</span>
+					</button>
+				{/each}
+			</div>
+		{/if}
+
 		{#if segments.length > 0}
 			<RouteInfo {segments} distance={routeDistance} duration={routeDuration} />
 		{/if}
@@ -146,7 +179,7 @@
 	</div>
 
 	<div class="map-area">
-		<Map {segments} {startMarker} {endMarker} onMapClick={handleMapClick} />
+		<Map {segments} {alternativeRoutes} {startMarker} {endMarker} onMapClick={handleMapClick} />
 	</div>
 </div>
 
@@ -194,6 +227,43 @@
 		margin: 4px 0 0;
 		font-size: 13px;
 		color: #666;
+	}
+
+	.route-options {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+	}
+
+	.route-option {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background: #f5f5f5;
+		border: 2px solid transparent;
+		border-radius: 8px;
+		padding: 8px 12px;
+		font-size: 12px;
+		cursor: pointer;
+		text-align: left;
+	}
+
+	.route-option-summary {
+		font-weight: 600;
+		color: #333;
+	}
+
+	.route-option-meta {
+		color: #888;
+	}
+
+	.route-option.active {
+		border-color: #2563eb;
+		background: #eff6ff;
+	}
+
+	.route-option.active .route-option-meta {
+		color: #2563eb;
 	}
 
 	.click-route {

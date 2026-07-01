@@ -7,6 +7,7 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
@@ -32,22 +33,37 @@ type Properties struct {
 	LastUpdated   string `json:"last_updated"`
 }
 
+// SeedFromGeoJSON reloads road_segments from data/geojson/*.geojson.
+// GeoJSON is the source of truth (see CLAUDE.md) and road_segments has no
+// other write path, so each seed run replaces the table's contents entirely
+// inside one transaction — this is what keeps renamed/removed/edited
+// segments from lingering as stale rows after a redeploy.
 func SeedFromGeoJSON(ctx context.Context, pool *pgxpool.Pool, dir string) error {
 	files, err := filepath.Glob(filepath.Join(dir, "*.geojson"))
 	if err != nil {
 		return fmt.Errorf("listing geojson files: %w", err)
 	}
 
+	tx, err := pool.Begin(ctx)
+	if err != nil {
+		return fmt.Errorf("starting transaction: %w", err)
+	}
+	defer tx.Rollback(ctx)
+
+	if _, err := tx.Exec(ctx, "TRUNCATE road_segments RESTART IDENTITY"); err != nil {
+		return fmt.Errorf("truncating road_segments: %w", err)
+	}
+
 	for _, file := range files {
-		if err := loadGeoJSONFile(ctx, pool, file); err != nil {
+		if err := loadGeoJSONFile(ctx, tx, file); err != nil {
 			return fmt.Errorf("loading %s: %w", file, err)
 		}
 	}
 
-	return nil
+	return tx.Commit(ctx)
 }
 
-func loadGeoJSONFile(ctx context.Context, pool *pgxpool.Pool, path string) error {
+func loadGeoJSONFile(ctx context.Context, tx pgx.Tx, path string) error {
 	data, err := os.ReadFile(path)
 	if err != nil {
 		return err
@@ -61,10 +77,9 @@ func loadGeoJSONFile(ctx context.Context, pool *pgxpool.Pool, path string) error
 	for _, f := range fc.Features {
 		geomStr := string(f.Geometry)
 
-		_, err := pool.Exec(ctx, `
+		_, err := tx.Exec(ctx, `
 			INSERT INTO road_segments (road_name, road_class, speed_limit_kmh, direction, source, verified, county, last_updated, geometry)
 			VALUES ($1, $2, $3, $4, $5, $6, $7, $8::date, ST_SetSRID(ST_GeomFromGeoJSON($9), 4326))
-			ON CONFLICT DO NOTHING
 		`,
 			f.Properties.RoadName,
 			f.Properties.RoadClass,

@@ -2,6 +2,8 @@
 
 An open-source database of Kenyan road speed limits with a Go API and Chrome extension that overlays color-coded speed zones on Google Maps.
 
+The Android Auto and Kotlin Multiplatform mobile apps are maintained in a separate repo: [speed-ke-mobile](https://github.com/Arthur-Kamau/speed-ke-mobile). Both consume this project's deployed API.
+
 ## The Problem
 
 Kenya's National Transport Safety Authority (NTSA) has deployed mobile speed detectors with instant fines across the country. However, road signage for speed limits is poor or missing entirely. Drivers often have no way to know the legal speed limit on the road they're traveling — until they're fined.

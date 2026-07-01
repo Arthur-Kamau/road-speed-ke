@@ -294,14 +294,14 @@
     {
       "type": "Feature",
       "properties": {
-        "road_name": "A104 \u2014 Timboroa to Burnt Forest",
+        "road_name": "A104 \u2014 Timboroa to Nabkoi",
         "speed_limit_kmh": 100,
         "road_class": "highway",
         "direction": "both",
-        "source": "LN 62/1975 Schedule \u2014 Single carriageway Class 1(a)",
+        "source": "LN 62/1975 Schedule \u2014 Single carriageway Class 1(a); coordinates re-verified against OSM road centerline 2026-07-01",
         "verified": true,
         "county": "Uasin Gishu",
-        "last_updated": "2026-06-25"
+        "last_updated": "2026-07-01"
       },
       "geometry": {
         "type": "LineString",
@@ -311,28 +311,20 @@
             0.0
           ],
           [
-            35.74,
-            0.04
+            35.5465,
+            0.063
           ],
           [
-            35.7,
-            0.08
+            35.5401,
+            0.0812
           ],
           [
-            35.66,
-            0.12
+            35.5088,
+            0.0928
           ],
           [
-            35.62,
-            0.16
-          ],
-          [
-            35.58,
-            0.2
-          ],
-          [
-            35.52,
-            0.21
+            35.464,
+            0.1316
           ]
         ]
       }
@@ -340,29 +332,29 @@
     {
       "type": "Feature",
       "properties": {
-        "road_name": "A104 \u2014 Burnt Forest Town",
+        "road_name": "A104 \u2014 Nabkoi Town",
         "speed_limit_kmh": 50,
         "road_class": "urban",
         "direction": "both",
-        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area; coordinates re-verified against OSM road centerline 2026-07-01",
         "verified": false,
         "county": "Uasin Gishu",
-        "last_updated": "2026-06-25"
+        "last_updated": "2026-07-01"
       },
       "geometry": {
         "type": "LineString",
         "coordinates": [
           [
-            35.52,
-            0.21
+            35.464,
+            0.1316
           ],
           [
-            35.505,
-            0.22
+            35.4683,
+            0.1416
           ],
           [
-            35.49,
-            0.23
+            35.4702,
+            0.1488
           ]
         ]
       }
@@ -370,25 +362,29 @@
     {
       "type": "Feature",
       "properties": {
-        "road_name": "A104 \u2014 Burnt Forest to Kondoo/Nabkoi",
+        "road_name": "A104 \u2014 Nabkoi to Kondoo",
         "speed_limit_kmh": 100,
         "road_class": "highway",
         "direction": "both",
-        "source": "LN 62/1975 Schedule \u2014 Single carriageway Class 1(a)",
+        "source": "LN 62/1975 Schedule \u2014 Single carriageway Class 1(a); coordinates re-verified against OSM road centerline 2026-07-01",
         "verified": false,
         "county": "Uasin Gishu",
-        "last_updated": "2026-06-25"
+        "last_updated": "2026-07-01"
       },
       "geometry": {
         "type": "LineString",
         "coordinates": [
           [
-            35.49,
-            0.23
+            35.4702,
+            0.1488
           ],
           [
-            35.47,
-            0.26
+            35.4607,
+            0.1719
+          ],
+          [
+            35.4518,
+            0.1863
           ]
         ]
       }
@@ -396,29 +392,29 @@
     {
       "type": "Feature",
       "properties": {
-        "road_name": "A104 \u2014 Kondoo/Nabkoi Trading Centre",
+        "road_name": "A104 \u2014 Kondoo Trading Centre",
         "speed_limit_kmh": 50,
         "road_class": "urban",
         "direction": "both",
-        "source": "Traffic Act Cap 403, Section 42 \u2014 Trading centre; driver reports of speed gun enforcement",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Trading centre; driver reports of speed gun enforcement; coordinates re-verified against OSM road centerline 2026-07-01",
         "verified": false,
         "county": "Uasin Gishu",
-        "last_updated": "2026-06-25"
+        "last_updated": "2026-07-01"
       },
       "geometry": {
         "type": "LineString",
         "coordinates": [
           [
-            35.47,
-            0.26
+            35.4518,
+            0.1863
           ],
           [
-            35.455,
-            0.275
+            35.4475,
+            0.1924
           ],
           [
-            35.44,
-            0.29
+            35.4425,
+            0.2036
           ]
         ]
       }
@@ -426,25 +422,29 @@
     {
       "type": "Feature",
       "properties": {
-        "road_name": "A104 \u2014 Nabkoi to Ainabkoi",
+        "road_name": "A104 \u2014 Kondoo to Ainabkoi/Burnt Forest",
         "speed_limit_kmh": 100,
         "road_class": "highway",
         "direction": "both",
-        "source": "LN 62/1975 Schedule \u2014 Single carriageway Class 1(a)",
+        "source": "LN 62/1975 Schedule \u2014 Single carriageway Class 1(a); coordinates re-verified against OSM road centerline 2026-07-01",
         "verified": false,
         "county": "Uasin Gishu",
-        "last_updated": "2026-06-25"
+        "last_updated": "2026-07-01"
       },
       "geometry": {
         "type": "LineString",
         "coordinates": [
           [
-            35.44,
-            0.29
+            35.4425,
+            0.2036
           ],
           [
-            35.42,
-            0.32
+            35.441,
+            0.2064
+          ],
+          [
+            35.44,
+            0.2078
           ]
         ]
       }
@@ -452,29 +452,29 @@
     {
       "type": "Feature",
       "properties": {
-        "road_name": "A104 \u2014 Ainabkoi Town",
+        "road_name": "A104 \u2014 Ainabkoi/Burnt Forest Town",
         "speed_limit_kmh": 50,
         "road_class": "urban",
         "direction": "both",
-        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area",
+        "source": "Traffic Act Cap 403, Section 42 \u2014 Built-up area; coordinates re-verified against OSM road centerline 2026-07-01",
         "verified": false,
         "county": "Uasin Gishu",
-        "last_updated": "2026-06-25"
+        "last_updated": "2026-07-01"
       },
       "geometry": {
         "type": "LineString",
         "coordinates": [
           [
-            35.42,
-            0.32
+            35.44,
+            0.2078
           ],
           [
-            35.405,
-            0.34
+            35.4307,
+            0.2177
           ],
           [
-            35.39,
-            0.36
+            35.4248,
+            0.2247
           ]
         ]
       }
@@ -486,25 +486,29 @@
         "speed_limit_kmh": 100,
         "road_class": "highway",
         "direction": "both",
-        "source": "LN 62/1975 Schedule \u2014 Single carriageway Class 1(a)",
+        "source": "LN 62/1975 Schedule \u2014 Single carriageway Class 1(a); coordinates re-verified against OSM road centerline 2026-07-01",
         "verified": false,
         "county": "Uasin Gishu",
-        "last_updated": "2026-06-25"
+        "last_updated": "2026-07-01"
       },
       "geometry": {
         "type": "LineString",
         "coordinates": [
           [
-            35.39,
-            0.36
+            35.4248,
+            0.2247
           ],
           [
-            35.35,
-            0.4
+            35.3806,
+            0.298
           ],
           [
-            35.31,
-            0.45
+            35.332,
+            0.3914
+          ],
+          [
+            35.3008,
+            0.4868
           ],
           [
             35.28,

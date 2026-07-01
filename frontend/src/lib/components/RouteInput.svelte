@@ -1,5 +1,8 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { geocode } from '$lib/services/api';
+	import { MAP_PROVIDER } from '$lib/services/mapConfig';
+	import { loadGoogleMaps } from '$lib/services/googleMapsLoader';
 	import type { NominatimResult } from '$lib/types/speed';
 
 	interface Props {
@@ -19,7 +22,43 @@
 	let endFocused = $state(false);
 	let searchTimeout: ReturnType<typeof setTimeout>;
 
+	let startInputEl: HTMLInputElement;
+	let endInputEl: HTMLInputElement;
+	const useGooglePlaces = MAP_PROVIDER === 'google';
+
+	onMount(() => {
+		if (!useGooglePlaces) return;
+
+		loadGoogleMaps()
+			.then((g) => {
+				const options: google.maps.places.AutocompleteOptions = {
+					componentRestrictions: { country: 'ke' },
+					fields: ['geometry', 'name']
+				};
+
+				const startAutocomplete = new g.maps.places.Autocomplete(startInputEl, options);
+				startAutocomplete.addListener('place_changed', () => {
+					const place = startAutocomplete.getPlace();
+					if (place.geometry?.location) {
+						startCoord = [place.geometry.location.lat(), place.geometry.location.lng()];
+						startQuery = place.name ?? startQuery;
+					}
+				});
+
+				const endAutocomplete = new g.maps.places.Autocomplete(endInputEl, options);
+				endAutocomplete.addListener('place_changed', () => {
+					const place = endAutocomplete.getPlace();
+					if (place.geometry?.location) {
+						endCoord = [place.geometry.location.lat(), place.geometry.location.lng()];
+						endQuery = place.name ?? endQuery;
+					}
+				});
+			})
+			.catch((e) => console.error('Google Places unavailable, using manual search', e));
+	});
+
 	function debounceSearch(query: string, setter: (r: NominatimResult[]) => void) {
+		if (useGooglePlaces) return;
 		clearTimeout(searchTimeout);
 		if (query.length < 2) {
 			setter([]);
@@ -88,6 +127,7 @@
 				id="start"
 				type="text"
 				placeholder="e.g. Nairobi CBD"
+				bind:this={startInputEl}
 				bind:value={startQuery}
 				onfocus={() => (startFocused = true)}
 				onblur={() => setTimeout(() => (startFocused = false), 200)}
@@ -100,7 +140,7 @@
 				}}
 			/>
 		</div>
-		{#if startFocused && startResults.length > 0}
+		{#if !useGooglePlaces && startFocused && startResults.length > 0}
 			<ul class="suggestions">
 				{#each startResults as r}
 					<li>
@@ -125,6 +165,7 @@
 				id="end"
 				type="text"
 				placeholder="e.g. Mombasa"
+				bind:this={endInputEl}
 				bind:value={endQuery}
 				onfocus={() => (endFocused = true)}
 				onblur={() => setTimeout(() => (endFocused = false), 200)}
@@ -137,7 +178,7 @@
 				}}
 			/>
 		</div>
-		{#if endFocused && endResults.length > 0}
+		{#if !useGooglePlaces && endFocused && endResults.length > 0}
 			<ul class="suggestions">
 				{#each endResults as r}
 					<li>

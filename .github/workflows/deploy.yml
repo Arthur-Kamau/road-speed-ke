@@ -22,6 +22,8 @@ jobs:
           GOOS=linux GOARCH=amd64 go build -o bin/scraper cmd/scraper/main.go
 
       - name: Build frontend
+        env:
+          VITE_GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
         run: |
           cd frontend
           npm install -g pnpm
@@ -67,7 +69,8 @@ jobs:
             # Migrations
             migrate -path migrations -database "\$DATABASE_URL" up
 
-            # Seed any new GeoJSON segments (ON CONFLICT DO NOTHING, idempotent)
+            # Reload road_segments from GeoJSON (truncates + reinserts in one transaction,
+            # so renamed/removed/edited segments never linger as stale rows)
             DATABASE_URL="\$DATABASE_URL" ./bin-new/scraper --seed
 
             # Hot-swap API binary (service points to bin/api) and restart
