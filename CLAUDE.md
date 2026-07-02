@@ -104,6 +104,19 @@ Hazards are stored in `road_hazards` table (Point geometry) and served at `GET /
 Community-submitted hazards via `POST /api/v1/hazards` go in unverified state.
 Community-submitted speed observations via `POST /api/v1/speeds/report` go into `speed_reports` (reviewed before promoting to `road_segments`).
 
+## Authentication
+
+Google Sign-In via ID token verification. The backend verifies tokens against Google's `oauth2.googleapis.com/tokeninfo` endpoint — no JWT library needed.
+
+- `POST /api/v1/auth/google` — accepts `{ "id_token": "..." }`, verifies with Google, upserts user in `users` table, returns user profile.
+- `GET /api/v1/auth/me` — returns current user (requires `Authorization: Bearer <id_token>` header).
+- `OptionalAuth` middleware on `POST /hazards` and `POST /speeds/report` — if a valid auth header is present, links the report to `user_id`; if absent, the report is anonymous (backward compatible).
+- `RequireAuth` middleware on `GET /auth/me`.
+- `users` table (migration 003): `id`, `google_id` (unique), `email`, `name`, `picture_url`, `created_at`.
+- `road_hazards` and `speed_reports` tables have an optional `user_id BIGINT REFERENCES users(id)` column (also migration 003).
+- Auth code lives in `internal/api/auth.go` (handler), `internal/api/middleware.go` (middleware), `internal/db/users.go` (queries).
+- Requires `GOOGLE_CLIENT_ID` env var (the OAuth Web Client ID from Google Cloud Console) for audience validation.
+
 ## Android Auto App & KMP Mobile App
 
 Both live in the separate [speed-ke-mobile](https://github.com/Arthur-Kamau/speed-ke-mobile) repo — clone it as a sibling directory (e.g. `../speed-ke-mobile`) to work on them. They are not part of this repo's git history; see `.gitignore` for the local `kmp/`/`android-auto/` exclusions.

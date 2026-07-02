@@ -59,7 +59,13 @@ func (h *Handler) ReportHazard(c *gin.Context) {
 		return
 	}
 
-	id, err := h.queries.InsertHazard(c.Request.Context(), report)
+	var userID *int64
+	if uid, ok := c.Get("user_id"); ok {
+		v := uid.(int64)
+		userID = &v
+	}
+
+	id, err := h.queries.InsertHazard(c.Request.Context(), report, userID)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "failed to save hazard report"})
 		return
@@ -75,7 +81,13 @@ func (h *Handler) ReportSpeed(c *gin.Context) {
 		return
 	}
 
-	id, err := h.queries.InsertSpeedReport(c.Request.Context(), report)
+	var userID *int64
+	if uid, ok := c.Get("user_id"); ok {
+		v := uid.(int64)
+		userID = &v
+	}
+
+	id, err := h.queries.InsertSpeedReport(c.Request.Context(), report, userID)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "failed to save speed report"})
 		return

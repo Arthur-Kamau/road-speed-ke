@@ -35,30 +35,30 @@ func (q *Queries) GetHazardsByBBox(ctx context.Context, bbox models.BBoxQuery) (
 	return hazards, nil
 }
 
-func (q *Queries) InsertHazard(ctx context.Context, r models.HazardReport) (int64, error) {
+func (q *Queries) InsertHazard(ctx context.Context, r models.HazardReport, userID *int64) (int64, error) {
 	var id int64
 	err := q.pool.QueryRow(ctx, `
-		INSERT INTO road_hazards (hazard_type, description, geometry, source)
-		VALUES ($1, $2, ST_SetSRID(ST_MakePoint($3, $4), 4326), 'user_report')
+		INSERT INTO road_hazards (hazard_type, description, geometry, source, user_id)
+		VALUES ($1, $2, ST_SetSRID(ST_MakePoint($3, $4), 4326), 'user_report', $5)
 		RETURNING id
-	`, r.HazardType, r.Description, r.Lng, r.Lat).Scan(&id)
+	`, r.HazardType, r.Description, r.Lng, r.Lat, userID).Scan(&id)
 	if err != nil {
 		return 0, fmt.Errorf("inserting hazard: %w", err)
 	}
 	return id, nil
 }
 
-func (q *Queries) InsertSpeedReport(ctx context.Context, r models.SpeedReport) (int64, error) {
+func (q *Queries) InsertSpeedReport(ctx context.Context, r models.SpeedReport, userID *int64) (int64, error) {
 	roadClass := r.RoadClass
 	if roadClass == "" {
 		roadClass = "urban"
 	}
 	var id int64
 	err := q.pool.QueryRow(ctx, `
-		INSERT INTO speed_reports (road_name, speed_limit_kmh, road_class, geometry, source)
-		VALUES ($1, $2, $3, ST_SetSRID(ST_MakePoint($4, $5), 4326), 'user_report')
+		INSERT INTO speed_reports (road_name, speed_limit_kmh, road_class, geometry, source, user_id)
+		VALUES ($1, $2, $3, ST_SetSRID(ST_MakePoint($4, $5), 4326), 'user_report', $6)
 		RETURNING id
-	`, r.RoadName, r.SpeedLimitKmh, roadClass, r.Lng, r.Lat).Scan(&id)
+	`, r.RoadName, r.SpeedLimitKmh, roadClass, r.Lng, r.Lat, userID).Scan(&id)
 	if err != nil {
 		return 0, fmt.Errorf("inserting speed report: %w", err)
 	}

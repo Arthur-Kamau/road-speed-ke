@@ -1,0 +1,3 @@
+ALTER TABLE speed_reports DROP COLUMN IF EXISTS user_id;
+ALTER TABLE road_hazards DROP COLUMN IF EXISTS user_id;
+DROP TABLE IF EXISTS users;
