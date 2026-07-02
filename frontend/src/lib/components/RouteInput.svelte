@@ -24,46 +24,42 @@
 
 	let startInputEl: HTMLInputElement;
 	let endInputEl: HTMLInputElement;
+	let startPlaceContainer: HTMLDivElement;
+	let endPlaceContainer: HTMLDivElement;
 	let useGooglePlaces = $state(MAP_PROVIDER === 'google');
 
 	onMount(() => {
 		if (!useGooglePlaces) return;
 
 		loadGoogleMaps()
-			.then((g) => {
-				const options: google.maps.places.AutocompleteOptions = {
+			.then(async (g) => {
+				const { PlaceAutocompleteElement } = await g.maps.importLibrary('places') as google.maps.PlacesLibrary;
+
+				const startEl = new PlaceAutocompleteElement({
 					componentRestrictions: { country: 'ke' },
-					fields: ['geometry', 'name', 'formatted_address']
-				};
-
-				const startAc = new g.maps.places.Autocomplete(startInputEl, options);
-				startAc.addListener('place_changed', () => {
-					const place = startAc.getPlace();
-					if (place.geometry?.location) {
-						startCoord = [place.geometry.location.lat(), place.geometry.location.lng()];
-						startQuery = place.name ?? place.formatted_address ?? startInputEl.value;
+				});
+				startEl.addEventListener('gmp-placeselect', async (e: any) => {
+					const place = e.place;
+					await place.fetchFields({ fields: ['displayName', 'location'] });
+					if (place.location) {
+						startCoord = [place.location.lat(), place.location.lng()];
+						startQuery = place.displayName ?? '';
 					}
 				});
+				startPlaceContainer.appendChild(startEl);
 
-				const endAc = new g.maps.places.Autocomplete(endInputEl, options);
-				endAc.addListener('place_changed', () => {
-					const place = endAc.getPlace();
-					if (place.geometry?.location) {
-						endCoord = [place.geometry.location.lat(), place.geometry.location.lng()];
-						endQuery = place.name ?? place.formatted_address ?? endInputEl.value;
+				const endEl = new PlaceAutocompleteElement({
+					componentRestrictions: { country: 'ke' },
+				});
+				endEl.addEventListener('gmp-placeselect', async (e: any) => {
+					const place = e.place;
+					await place.fetchFields({ fields: ['displayName', 'location'] });
+					if (place.location) {
+						endCoord = [place.location.lat(), place.location.lng()];
+						endQuery = place.displayName ?? '';
 					}
 				});
-
-				// Prevent the form from submitting when user presses Enter to select
-				// an autocomplete suggestion (Google fires keydown before place_changed)
-				const suppressEnter = (e: KeyboardEvent) => {
-					if (e.key === 'Enter') {
-						const pacVisible = document.querySelector('.pac-container:not([style*="display: none"])');
-						if (pacVisible) e.preventDefault();
-					}
-				};
-				startInputEl.addEventListener('keydown', suppressEnter);
-				endInputEl.addEventListener('keydown', suppressEnter);
+				endPlaceContainer.appendChild(endEl);
 			})
 			.catch((e) => {
 				console.error('Google Places unavailable, falling back to manual search', e);
@@ -101,8 +97,6 @@
 	}
 
 	async function resolveAndGo() {
-		// When using Google Places, read coordinates from the input if place_changed
-		// already fired — don't fall back to Nominatim geocode.
 		if (useGooglePlaces) {
 			if (startCoord && endCoord) {
 				onRoute(startCoord, endCoord);
@@ -132,10 +126,6 @@
 	function handleSwap() {
 		[startQuery, endQuery] = [endQuery, startQuery];
 		[startCoord, endCoord] = [endCoord, startCoord];
-		if (useGooglePlaces) {
-			startInputEl.value = startQuery;
-			endInputEl.value = endQuery;
-		}
 	}
 
 	function handleKeydown(e: KeyboardEvent) {
@@ -148,35 +138,42 @@
 
 	<div class="input-group">
 		<label for="start">From</label>
-		<div class="input-wrapper">
-			<span class="dot start-dot"></span>
-			<input
-				id="start"
-				type="text"
-				placeholder="e.g. Nairobi CBD"
-				bind:this={startInputEl}
-				bind:value={startQuery}
-				onfocus={() => (startFocused = true)}
-				onblur={() => setTimeout(() => (startFocused = false), 200)}
-				onkeydown={handleKeydown}
-				oninput={() => {
-					startCoord = null;
-					debounceSearch(startQuery, (r) => {
-						startResults = r;
-					});
-				}}
-			/>
-		</div>
-		{#if !useGooglePlaces && startFocused && startResults.length > 0}
-			<ul class="suggestions">
-				{#each startResults as r}
-					<li>
-						<button type="button" onmousedown={() => selectStart(r)}>
-							{r.display_name}
-						</button>
-					</li>
-				{/each}
-			</ul>
+		{#if useGooglePlaces}
+			<div class="input-wrapper">
+				<span class="dot start-dot"></span>
+				<div class="place-autocomplete" bind:this={startPlaceContainer}></div>
+			</div>
+		{:else}
+			<div class="input-wrapper">
+				<span class="dot start-dot"></span>
+				<input
+					id="start"
+					type="text"
+					placeholder="e.g. Nairobi CBD"
+					bind:this={startInputEl}
+					bind:value={startQuery}
+					onfocus={() => (startFocused = true)}
+					onblur={() => setTimeout(() => (startFocused = false), 200)}
+					onkeydown={handleKeydown}
+					oninput={() => {
+						startCoord = null;
+						debounceSearch(startQuery, (r) => {
+							startResults = r;
+						});
+					}}
+				/>
+			</div>
+			{#if startFocused && startResults.length > 0}
+				<ul class="suggestions">
+					{#each startResults as r}
+						<li>
+							<button type="button" onmousedown={() => selectStart(r)}>
+								{r.display_name}
+							</button>
+						</li>
+					{/each}
+				</ul>
+			{/if}
 		{/if}
 	</div>
 
@@ -186,41 +183,48 @@
 
 	<div class="input-group">
 		<label for="end">To</label>
-		<div class="input-wrapper">
-			<span class="dot end-dot"></span>
-			<input
-				id="end"
-				type="text"
-				placeholder="e.g. Mombasa"
-				bind:this={endInputEl}
-				bind:value={endQuery}
-				onfocus={() => (endFocused = true)}
-				onblur={() => setTimeout(() => (endFocused = false), 200)}
-				onkeydown={handleKeydown}
-				oninput={() => {
-					endCoord = null;
-					debounceSearch(endQuery, (r) => {
-						endResults = r;
-					});
-				}}
-			/>
-		</div>
-		{#if !useGooglePlaces && endFocused && endResults.length > 0}
-			<ul class="suggestions">
-				{#each endResults as r}
-					<li>
-						<button type="button" onmousedown={() => selectEnd(r)}>
-							{r.display_name}
-						</button>
-					</li>
-				{/each}
-			</ul>
+		{#if useGooglePlaces}
+			<div class="input-wrapper">
+				<span class="dot end-dot"></span>
+				<div class="place-autocomplete" bind:this={endPlaceContainer}></div>
+			</div>
+		{:else}
+			<div class="input-wrapper">
+				<span class="dot end-dot"></span>
+				<input
+					id="end"
+					type="text"
+					placeholder="e.g. Mombasa"
+					bind:this={endInputEl}
+					bind:value={endQuery}
+					onfocus={() => (endFocused = true)}
+					onblur={() => setTimeout(() => (endFocused = false), 200)}
+					onkeydown={handleKeydown}
+					oninput={() => {
+						endCoord = null;
+						debounceSearch(endQuery, (r) => {
+							endResults = r;
+						});
+					}}
+				/>
+			</div>
+			{#if endFocused && endResults.length > 0}
+				<ul class="suggestions">
+					{#each endResults as r}
+						<li>
+							<button type="button" onmousedown={() => selectEnd(r)}>
+								{r.display_name}
+							</button>
+						</li>
+					{/each}
+				</ul>
+			{/if}
 		{/if}
 	</div>
 
 	<button
 		class="preview-btn"
-		disabled={loading || (startQuery.length < 2 || endQuery.length < 2)}
+		disabled={loading || (startQuery.length < 2 || endQuery.length < 2) && !canPreview}
 		onclick={resolveAndGo}
 	>
 		{#if loading}
@@ -292,6 +296,26 @@
 		font-size: 14px;
 		outline: none;
 		color: #1a1a1a;
+	}
+
+	.place-autocomplete {
+		flex: 1;
+	}
+
+	:global(.place-autocomplete gmp-place-autocomplete) {
+		width: 100%;
+		--gmp-mat-input-background: transparent;
+		--gmp-mat-input-border: none;
+	}
+
+	:global(.place-autocomplete input) {
+		border: none !important;
+		background: transparent !important;
+		padding: 10px 0 !important;
+		font-size: 14px !important;
+		outline: none !important;
+		color: #1a1a1a !important;
+		box-shadow: none !important;
 	}
 
 	.suggestions {
@@ -367,40 +391,5 @@
 	.preview-btn:disabled {
 		background: #93c5fd;
 		cursor: not-allowed;
-	}
-
-	/* Google Places Autocomplete dropdown (rendered at body level) */
-	:global(.pac-container) {
-		z-index: 10000 !important;
-		border-radius: 8px;
-		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-		border: none;
-		margin-top: 4px;
-		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-	}
-
-	:global(.pac-item) {
-		padding: 8px 12px;
-		font-size: 13px;
-		cursor: pointer;
-		border-top: 1px solid #f0f0f0;
-	}
-
-	:global(.pac-item:first-child) {
-		border-top: none;
-	}
-
-	:global(.pac-item:hover),
-	:global(.pac-item-selected) {
-		background: #f0f4ff;
-	}
-
-	:global(.pac-icon) {
-		display: none;
-	}
-
-	:global(.pac-item-query) {
-		font-size: 13px;
-		color: #333;
 	}
 </style>
