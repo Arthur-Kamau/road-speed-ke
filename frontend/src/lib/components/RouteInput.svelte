@@ -24,7 +24,7 @@
 
 	let startInputEl: HTMLInputElement;
 	let endInputEl: HTMLInputElement;
-	const useGooglePlaces = MAP_PROVIDER === 'google';
+	let useGooglePlaces = $state(MAP_PROVIDER === 'google');
 
 	onMount(() => {
 		if (!useGooglePlaces) return;
@@ -65,7 +65,10 @@
 				startInputEl.addEventListener('keydown', suppressEnter);
 				endInputEl.addEventListener('keydown', suppressEnter);
 			})
-			.catch((e) => console.error('Google Places unavailable, using manual search', e));
+			.catch((e) => {
+				console.error('Google Places unavailable, falling back to manual search', e);
+				useGooglePlaces = false;
+			});
 	});
 
 	function debounceSearch(query: string, setter: (r: NominatimResult[]) => void) {
