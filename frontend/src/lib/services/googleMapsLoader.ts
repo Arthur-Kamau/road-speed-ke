@@ -10,7 +10,7 @@ export function loadGoogleMaps(): Promise<typeof google> {
 			reject(new Error('Google Maps can only load in the browser'));
 			return;
 		}
-		if (window.google?.maps?.places) {
+		if (window.google?.maps?.ControlPosition) {
 			resolve(window.google);
 			return;
 		}
@@ -21,7 +21,7 @@ export function loadGoogleMaps(): Promise<typeof google> {
 		script.onerror = () => reject(new Error('Failed to load Google Maps SDK'));
 		script.onload = () => {
 			const check = () => {
-				if (window.google?.maps) resolve(window.google);
+				if (window.google?.maps?.ControlPosition) resolve(window.google);
 				else setTimeout(check, 50);
 			};
 			check();

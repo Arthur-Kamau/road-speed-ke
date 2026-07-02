@@ -32,8 +32,8 @@
 		if (!useGooglePlaces) return;
 
 		loadGoogleMaps()
-			.then(async (g) => {
-				const { PlaceAutocompleteElement } = await g.maps.importLibrary('places') as google.maps.PlacesLibrary;
+			.then((g) => {
+				const { PlaceAutocompleteElement } = g.maps.places;
 
 				const startEl = new PlaceAutocompleteElement({
 					componentRestrictions: { country: 'ke' },
